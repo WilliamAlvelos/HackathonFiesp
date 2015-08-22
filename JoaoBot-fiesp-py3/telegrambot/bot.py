@@ -1,12 +1,12 @@
 import requests
 from datetime import datetime
-import codecs
 from .types import (Update, User, ChatGroup, Message, PhotoSize, 
                     Audio, Document, Sticker, Video, Contact, 
                     Location, InputFile, UserProfilePhotos)
 from .aux import *
 import json
 import logging
+import ast
 
 GLOBAL_TIMEOUT = 10
 #requests.packages.urllib3.disable_warnings()
@@ -377,7 +377,7 @@ class Bot:
         Useful for dump bot content to a persistent file
         """
         logging.info("Bot.__repr__(): Call for repr() to bot.")
-        return unicode(self.__dict__)
+        return str(self.__dict__)
 
     def __str__(self):
         """
@@ -394,6 +394,6 @@ class Bot:
         if dumpFile is None:
             logging.info("Bot.dumpMeTo(): File error. Aborting.")
             return None
-        dumpFile.write(repr(self))
+        json.dump( ast.literal_eval( repr(self) ), dumpFile, indent=3 )
         dumpFile.close()
         return True

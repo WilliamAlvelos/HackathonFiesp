@@ -1,6 +1,7 @@
 from .aux import *
 from datetime import datetime
 import json
+import time
 
 class Update:
     """
@@ -63,14 +64,7 @@ class User:
         () -> str
         Formal representantion for User object (a valid dictionary representation)
         """
-        return unicode(self.__dict__)
-
-    def encode(self, encoding):
-        """
-        (str) -> str
-        Wrapper for utf-8 support in string representation
-        """
-        return self.__str__().encode(encoding)
+        return str(self.__dict__)
 
 class ChatGroup:
     """
@@ -102,14 +96,8 @@ class ChatGroup:
         () -> str
         Formal representantion for ChatGroup object (a valid dictionary representation)
         """
-        return unicode(self.__dict__)
-    
-    def encode(self, encoding):
-        """
-        (str) -> str
-        Wrapper for utf-8 support in string representation
-        """
-        return self.__str__().encode(encoding)
+        return str(self.__dict__)
+
 
 class Message:
     """
@@ -192,14 +180,14 @@ class Message:
         () -> str
         Human readable representation for Message object
         """
-        string = "Message of type " + self.type + " sended by " + self.from_user.encode('utf-8')
+        string = "Message of type " + self.type + " sended by " + str(self.from_user)
         if isinstance(self.chat, ChatGroup):
-            string += " on " + self.chat.encode('utf-8')
+            string += " on " + self.chat
         string += ".\nDate: " + self.date.strftime("%A, %d %B %Y %I:%M%p")
         if self.type != "photo":
-            string += "\nContent: " + self.content.encode('utf-8')
+            string += "\nContent: " + str(self.content)
         else:
-            string += "\nContent: " + self.content[0].encode('utf-8')
+            string += "\nContent: " + str(self.content[0])
         return string
 
     def __repr__(self):
@@ -207,14 +195,18 @@ class Message:
         () -> str
         Formal representantion for Message object (a valid dictionary representation)
         """
-        return unicode(self.__dict__)
+        reprdict = {}
+        for key in self.__dict__:
+            if key != "date" and key != "from_user" and key != "content" and key != "forward_date":
+                reprdict[key] = self.__dict__[key]
+            elif key == "from_user":
+                reprdict["from"] = self.__dict__[key]
+            elif key == "content":
+                reprdict[ self.__dict__["type"] ] = self.__dict__[key]
+            else:
+                reprdict[key] = time.mktime( self.__dict__[key].timetuple() )
+        return str(reprdict)
 
-    def encode(self, encoding):
-        """
-        (str) -> str
-        Wrapper for utf-8 support in string representation
-        """
-        return self.__str__().encode(encoding)
 
 class PhotoSize:
     """
@@ -246,21 +238,16 @@ class PhotoSize:
         Human readable representation for PhotoSize object
         """
         string = "PhotoSize object with ID " + self.file_id
-        return string.encode('utf-8')
+        return string
 
     def __repr__(self):
         """
         () -> str
         Formal representantion for PhotoSize object (a valid dictionary representation)
         """
-        return unicode(self.__dict__)
+        return str(self.__dict__)
 
-    def encode(self, encoding):
-        """
-        (str) -> str
-        Wrapper for utf-8 support in string representation
-        """
-        return self.__str__().encode(encoding)
+
 
 class Audio:
     """
@@ -296,21 +283,15 @@ class Audio:
         Human readable representation for Audio object
         """
         string = "Audio object with ID " + self.file_id
-        return string.encode('utf-8')
+        return string
 
     def __repr__(self):
         """
         () -> str
         Formal representantion for Audio object (a valid dictionary representation)
         """
-        return unicode(self.__dict__)
+        return str(self.__dict__)
 
-    def encode(self, encoding):
-        """
-        (str) -> str
-        Wrapper for utf-8 support in string representation
-        """
-        return self.__str__().encode(encoding)
 
 
 class Document:
@@ -356,21 +337,16 @@ class Document:
         string = "Document object with ID " + self.file_id
         if self.file_name != None:
             string += " named " + self.file_name
-        return string.encode('utf-8')
+        return string
 
     def __repr__(self):
         """
         () -> str
         Formal representantion for Document object (a valid dictionary representation)
         """
-        return unicode(self.__dict__)
+        return str(self.__dict__)
 
-    def encode(self, encoding):
-        """
-        (str) -> str
-        Wrapper for utf-8 support in string representation
-        """
-        return self.__str__().encode(encoding)
+
 
 
 
@@ -407,21 +383,15 @@ class Sticker:
         Human readable representation for Sticker object
         """
         string = "Sticker object with ID " + self.file_id
-        return string.encode('utf-8')
+        return string
 
     def __repr__(self):
         """
         () -> str
         Formal representantion for Sticker object (a valid dictionary representation)
         """
-        return unicode(self.__dict__)
+        return str(self.__dict__)
 
-    def encode(self, encoding):
-        """
-        (str) -> str
-        Wrapper for utf-8 support in string representation
-        """
-        return self.__str__().encode(encoding)
 
 class Video:
     """
@@ -470,21 +440,16 @@ class Video:
         Human readable representation for Video object
         """
         string = "Video object with ID " + self.file_id
-        return string.encode('utf-8')
+        return string
 
     def __repr__(self):
         """
         () -> str
         Formal representantion for Video object (a valid dictionary representation)
         """
-        return unicode(self.__dict__)
+        return str(self.__dict__)
 
-    def encode(self, encoding):
-        """
-        (str) -> str
-        Wrapper for utf-8 support in string representation
-        """
-        return self.__str__().encode(encoding)
+
 
 class Contact:
     """
@@ -528,21 +493,15 @@ class Contact:
         if self.user_id != None:
             string += "\nTelegram User ID: " + str(self.user_id) 
         
-        return string.encode('utf-8')
+        return string
 
     def __repr__(self):
         """
         () -> str
         Formal representantion for Contact object (a valid dictionary representation)
         """
-        return unicode(self.__dict__)
+        return str(self.__dict__)
 
-    def encode(self, encoding):
-        """
-        (str) -> str
-        Wrapper for utf-8 support in string representation
-        """
-        return self.__str__().encode(encoding)
 
 class Location:
     """
@@ -573,21 +532,15 @@ class Location:
         Human readable representation for Location object
         """
         string = "Location object (Longitude: " + str(self.longitude) + " Latitude: " + str(self.latitude) + ")"
-        return string.encode('utf-8')
+        return string
 
     def __repr__(self):
         """
         () -> str
         Formal representantion for Location object (a valid dictionary representation)
         """
-        return unicode(self.__dict__)
+        return str(self.__dict__)
 
-    def encode(self, encoding):
-        """
-        (str) -> str
-        Wrapper for utf-8 support in string representation
-        """
-        return self.__str__().encode(encoding)
 
 class InputFile:
     """
@@ -634,14 +587,14 @@ class ReplyKeyboardMarkup:
         self.selective = selective
 
     def toJSON(self):
-        return json.dumps(self.__dict__, encoding="utf-8")
+        return json.dumps(self.__dict__)
 
     def __repr__(self):
         """
         () -> str
         Formal representantion for Location object (a valid dictionary representation)
         """
-        return unicode(self.__dict__)
+        return str(self.__dict__)
 
 class ReplyKeyboardHide:
     def __init__(self, selective=False):
@@ -649,14 +602,14 @@ class ReplyKeyboardHide:
         self.selective = selective
 
     def toJSON(self):
-        return json.dumps(self.__dict__, encoding="utf-8")
+        return json.dumps(self.__dict__)
 
     def __repr__(self):
         """
         () -> str
         Formal representantion for Location object (a valid dictionary representation)
         """
-        return unicode(self.__dict__)
+        return str(self.__dict__)
 
 class ForceReply:
     def __init__(self, selective=False):
@@ -664,14 +617,14 @@ class ForceReply:
         self.selective = selective
         
     def toJSON(self):
-        return json.dumps(self.__dict__, encoding="utf-8")
+        return json.dumps(self.__dict__)
 
     def __repr__(self):
         """
         () -> str
         Formal representantion for Location object (a valid dictionary representation)
         """
-        return unicode(self.__dict__)
+        return str(self.__dict__)
 
                     
                     
