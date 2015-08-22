@@ -3,6 +3,5 @@
 
 pod 'Firebase'
 pod 'JSQMessagesViewController'
-pod 'RKDropdownAlert'
 
 
