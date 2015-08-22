@@ -14,8 +14,13 @@
 		3D14EE5B1B88DB6500EC1137 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D14EE581B88DB6500EC1137 /* FBSDKLoginKit.framework */; };
 		3D14EE5C1B88DB6500EC1137 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D14EE591B88DB6500EC1137 /* FBSDKShareKit.framework */; };
 		3D14EE5E1B88DF0300EC1137 /* PermissionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D14EE5D1B88DF0300EC1137 /* PermissionsResponse.swift */; };
-		3D14EE621B88E0A300EC1137 /* IHKeyboardAvoiding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D14EE611B88E0A300EC1137 /* IHKeyboardAvoiding.m */; };
 		3D14EE641B88EA7A00EC1137 /* GlobalContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D14EE631B88EA7A00EC1137 /* GlobalContants.swift */; };
+		3D14EE671B8902BA00EC1137 /* UserDAODefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D14EE661B8902BA00EC1137 /* UserDAODefault.swift */; };
+		3D14EE691B89065400EC1137 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D14EE681B89065400EC1137 /* ProfileViewController.swift */; };
+		3D14EE6B1B8906B000EC1137 /* Trabalhador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D14EE6A1B8906B000EC1137 /* Trabalhador.swift */; };
+		3D14EE6E1B89138500EC1137 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D14EE6D1B89138500EC1137 /* MapViewController.swift */; };
+		3D14EE7A1B89301F00EC1137 /* Registro2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D14EE791B89301F00EC1137 /* Registro2ViewController.swift */; };
+		3D14EE7C1B89313700EC1137 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D14EE7B1B89313700EC1137 /* ChatViewController.swift */; };
 		3D3BC1EC1B88D99D0010D23C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BC1EB1B88D99D0010D23C /* RegisterViewController.swift */; };
 		3DEBB18B1B88A7D3003BB09F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBB18A1B88A7D3003BB09F /* AppDelegate.swift */; };
 		3DEBB18D1B88A7D3003BB09F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBB18C1B88A7D3003BB09F /* LoginViewController.swift */; };
@@ -55,9 +60,13 @@
 		3D14EE581B88DB6500EC1137 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		3D14EE591B88DB6500EC1137 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		3D14EE5D1B88DF0300EC1137 /* PermissionsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsResponse.swift; sourceTree = "<group>"; };
-		3D14EE601B88E0A300EC1137 /* IHKeyboardAvoiding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IHKeyboardAvoiding.h; sourceTree = "<group>"; };
-		3D14EE611B88E0A300EC1137 /* IHKeyboardAvoiding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IHKeyboardAvoiding.m; sourceTree = "<group>"; };
 		3D14EE631B88EA7A00EC1137 /* GlobalContants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalContants.swift; sourceTree = "<group>"; };
+		3D14EE661B8902BA00EC1137 /* UserDAODefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDAODefault.swift; sourceTree = "<group>"; };
+		3D14EE681B89065400EC1137 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3D14EE6A1B8906B000EC1137 /* Trabalhador.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trabalhador.swift; sourceTree = "<group>"; };
+		3D14EE6D1B89138500EC1137 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3D14EE791B89301F00EC1137 /* Registro2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registro2ViewController.swift; sourceTree = "<group>"; };
+		3D14EE7B1B89313700EC1137 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3D3BC1EB1B88D99D0010D23C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3DEBB1851B88A7D3003BB09F /* HachathonFiesp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HachathonFiesp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DEBB1891B88A7D3003BB09F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,14 +121,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D14EE5F1B88E09000EC1137 /* ObjCfiles */ = {
+		3D14EE6C1B8906B600EC1137 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				3D14EE601B88E0A300EC1137 /* IHKeyboardAvoiding.h */,
-				3D14EE611B88E0A300EC1137 /* IHKeyboardAvoiding.m */,
+				3DEBB1B71B88C28A003BB09F /* User.swift */,
+				3D14EE6A1B8906B000EC1137 /* Trabalhador.swift */,
 			);
-			name = ObjCfiles;
-			path = HachathonFiesp;
+			name = Objects;
 			sourceTree = "<group>";
 		};
 		3DEBB17C1B88A7D3003BB09F = {
@@ -136,7 +144,6 @@
 				3DEBB1AE1B88C0D5003BB09F /* TwitterCore.framework */,
 				3DEBB1871B88A7D3003BB09F /* HachathonFiesp */,
 				3DEBB19D1B88A7D3003BB09F /* HachathonFiespTests */,
-				3D14EE5F1B88E09000EC1137 /* ObjCfiles */,
 				3DEBB1861B88A7D3003BB09F /* Products */,
 				6B6366F38CFFEDCB8B792557 /* Pods */,
 				C0C44FD18985030964A03DA5 /* Frameworks */,
@@ -194,11 +201,12 @@
 		3DEBB1B91B88C292003BB09F /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				3D14EE661B8902BA00EC1137 /* UserDAODefault.swift */,
 				3DEBB1C11B88C7BC003BB09F /* AlertJss.swift */,
 				3DEBB1BD1B88C463003BB09F /* TransitionManager.swift */,
 				3D14EE631B88EA7A00EC1137 /* GlobalContants.swift */,
 				3D14EE5D1B88DF0300EC1137 /* PermissionsResponse.swift */,
-				3DEBB1B71B88C28A003BB09F /* User.swift */,
+				3D14EE6C1B8906B600EC1137 /* Objects */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -207,8 +215,12 @@
 			isa = PBXGroup;
 			children = (
 				3DEBB18C1B88A7D3003BB09F /* LoginViewController.swift */,
+				3D14EE681B89065400EC1137 /* ProfileViewController.swift */,
+				3D14EE7B1B89313700EC1137 /* ChatViewController.swift */,
+				3D14EE6D1B89138500EC1137 /* MapViewController.swift */,
 				3D3BC1EB1B88D99D0010D23C /* RegisterViewController.swift */,
 				3DEBB1BF1B88C51C003BB09F /* HomeViewController.swift */,
+				3D14EE791B89301F00EC1137 /* Registro2ViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -385,15 +397,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D14EE641B88EA7A00EC1137 /* GlobalContants.swift in Sources */,
+				3D14EE671B8902BA00EC1137 /* UserDAODefault.swift in Sources */,
 				3DEBB1C01B88C51C003BB09F /* HomeViewController.swift in Sources */,
 				3DEBB18D1B88A7D3003BB09F /* LoginViewController.swift in Sources */,
+				3D14EE6B1B8906B000EC1137 /* Trabalhador.swift in Sources */,
 				3D3BC1EC1B88D99D0010D23C /* RegisterViewController.swift in Sources */,
-				3D14EE621B88E0A300EC1137 /* IHKeyboardAvoiding.m in Sources */,
+				3D14EE7A1B89301F00EC1137 /* Registro2ViewController.swift in Sources */,
+				3D14EE691B89065400EC1137 /* ProfileViewController.swift in Sources */,
 				3DEBB1BE1B88C463003BB09F /* TransitionManager.swift in Sources */,
 				3DEBB1C21B88C7BC003BB09F /* AlertJss.swift in Sources */,
 				3DEBB18B1B88A7D3003BB09F /* AppDelegate.swift in Sources */,
 				3DEBB1B81B88C28A003BB09F /* User.swift in Sources */,
 				3D14EE5E1B88DF0300EC1137 /* PermissionsResponse.swift in Sources */,
+				3D14EE7C1B89313700EC1137 /* ChatViewController.swift in Sources */,
+				3D14EE6E1B89138500EC1137 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

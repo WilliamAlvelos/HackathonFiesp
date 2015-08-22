@@ -17,6 +17,8 @@ class User: NSObject{
     
     var image = UIImage()
     
+    var senha = String()
+    
     override init(){
     
     }
@@ -25,10 +27,11 @@ class User: NSObject{
         self.name = name
     }
     
-    init(name : String  , email: String, image: UIImage){
+    init(name : String  , email: String, image: UIImage, senha: String){
         self.name = name
         self.email = email
         self.image = image
+        self.senha = senha
     }
 
 }

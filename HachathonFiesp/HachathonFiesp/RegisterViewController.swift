@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
@@ -14,6 +16,9 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     
     var pickerLibrary : UIImagePickerController?
     
+    var base64String: NSString?
+    
+    @IBOutlet var descricao: UITextView!
     @IBOutlet var image: UIButton!
     @IBOutlet var senhaConfirmacao: UITextField!
     @IBOutlet var senhaTextField: UITextField!
@@ -30,8 +35,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         pickerLibrary = UIImagePickerController()
         pickerLibrary!.delegate = self
-//        IHKeyboardAvoiding.setAvoidingView(self.view)
-
+        
         
         if user == nil {
             user = User()
@@ -71,6 +75,10 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         self.changeImage()
     }
     
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
+
     
     
     func changeImage(){
@@ -125,19 +133,22 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         return paths[0] as! NSString
     }
-    @IBAction func RegisterAction(sender: AnyObject) {
-        
-        
-    }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    
+    
+
+     //MARK: - Navigation
+
+     //In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+         //Get the new view controller using segue.destinationViewController.
+         //Pass the selected object to the new view controller.
+        var user = User(name: self.nomeTextField.text, email: self.emailTextField.text, image: self.image.backgroundImageForState(.Normal)!, senha: self.senhaTextField.text)
+        
+        var view = TransitionManager.creatView("registro2") as! Registro2ViewController
+        view.user = user
+        
     }
-    */
 
 }

@@ -12,3 +12,21 @@
 #define COCOAPODS_VERSION_MINOR_Firebase 3
 #define COCOAPODS_VERSION_PATCH_Firebase 3
 
+// JSQMessagesViewController
+#define COCOAPODS_POD_AVAILABLE_JSQMessagesViewController
+#define COCOAPODS_VERSION_MAJOR_JSQMessagesViewController 7
+#define COCOAPODS_VERSION_MINOR_JSQMessagesViewController 1
+#define COCOAPODS_VERSION_PATCH_JSQMessagesViewController 0
+
+// JSQSystemSoundPlayer
+#define COCOAPODS_POD_AVAILABLE_JSQSystemSoundPlayer
+#define COCOAPODS_VERSION_MAJOR_JSQSystemSoundPlayer 2
+#define COCOAPODS_VERSION_MINOR_JSQSystemSoundPlayer 0
+#define COCOAPODS_VERSION_PATCH_JSQSystemSoundPlayer 1
+
+// RKDropdownAlert
+#define COCOAPODS_POD_AVAILABLE_RKDropdownAlert
+#define COCOAPODS_VERSION_MAJOR_RKDropdownAlert 0
+#define COCOAPODS_VERSION_MINOR_RKDropdownAlert 3
+#define COCOAPODS_VERSION_PATCH_RKDropdownAlert 0
+

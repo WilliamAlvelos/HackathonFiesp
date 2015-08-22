@@ -11,7 +11,6 @@ import TwitterKit
 import DigitsKit
 import FBSDKLoginKit
 
-
 class LoginViewController: UIViewController {
     
     
@@ -19,6 +18,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
         self.title = "Login"
         
