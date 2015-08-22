@@ -8,11 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		3DEBB18B1B88A7D3003BB09F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBB18A1B88A7D3003BB09F /* AppDelegate.swift */; };
-		3DEBB18D1B88A7D3003BB09F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBB18C1B88A7D3003BB09F /* ViewController.swift */; };
+		3DEBB18D1B88A7D3003BB09F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBB18C1B88A7D3003BB09F /* LoginViewController.swift */; };
 		3DEBB1901B88A7D3003BB09F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEBB18E1B88A7D3003BB09F /* Main.storyboard */; };
 		3DEBB1921B88A7D3003BB09F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DEBB1911B88A7D3003BB09F /* Images.xcassets */; };
 		3DEBB1951B88A7D3003BB09F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DEBB1931B88A7D3003BB09F /* LaunchScreen.xib */; };
 		3DEBB1A11B88A7D3003BB09F /* HachathonFiespTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBB1A01B88A7D3003BB09F /* HachathonFiespTests.swift */; };
+		3DEBB1AF1B88C0D5003BB09F /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DEBB1AB1B88C0D5003BB09F /* Fabric.framework */; };
+		3DEBB1B01B88C0D5003BB09F /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DEBB1AC1B88C0D5003BB09F /* TwitterKit.framework */; };
+		3DEBB1B11B88C0D5003BB09F /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DEBB1AD1B88C0D5003BB09F /* TwitterKitResources.bundle */; };
+		3DEBB1B21B88C0D5003BB09F /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DEBB1AE1B88C0D5003BB09F /* TwitterCore.framework */; };
+		3DEBB1B51B88C1AA003BB09F /* DigitsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DEBB1B31B88C1AA003BB09F /* DigitsKit.framework */; };
+		3DEBB1B61B88C1AA003BB09F /* DigitsKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DEBB1B41B88C1AA003BB09F /* DigitsKitResources.bundle */; };
+		3DEBB1B81B88C28A003BB09F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBB1B71B88C28A003BB09F /* User.swift */; };
+		3DEBB1BE1B88C463003BB09F /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBB1BD1B88C463003BB09F /* TransitionManager.swift */; };
+		3DEBB1C01B88C51C003BB09F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBB1BF1B88C51C003BB09F /* HomeViewController.swift */; };
+		3DEBB1C21B88C7BC003BB09F /* AlertJss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBB1C11B88C7BC003BB09F /* AlertJss.swift */; };
+		CD7923010E42A2E38560A0C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C4A7EE6F2F4169EA68C8F7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +37,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1064EE9298B138CE238D7110 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3DEBB1851B88A7D3003BB09F /* HachathonFiesp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HachathonFiesp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DEBB1891B88A7D3003BB09F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DEBB18A1B88A7D3003BB09F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DEBB18C1B88A7D3003BB09F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DEBB18C1B88A7D3003BB09F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3DEBB18F1B88A7D3003BB09F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DEBB1911B88A7D3003BB09F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3DEBB1941B88A7D3003BB09F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3DEBB19A1B88A7D3003BB09F /* HachathonFiespTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HachathonFiespTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DEBB19F1B88A7D3003BB09F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DEBB1A01B88A7D3003BB09F /* HachathonFiespTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HachathonFiespTests.swift; sourceTree = "<group>"; };
+		3DEBB1AB1B88C0D5003BB09F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		3DEBB1AC1B88C0D5003BB09F /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		3DEBB1AD1B88C0D5003BB09F /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		3DEBB1AE1B88C0D5003BB09F /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		3DEBB1B31B88C1AA003BB09F /* DigitsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DigitsKit.framework; sourceTree = "<group>"; };
+		3DEBB1B41B88C1AA003BB09F /* DigitsKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DigitsKitResources.bundle; path = DigitsKit.framework/Versions/A/Resources/DigitsKitResources.bundle; sourceTree = "<group>"; };
+		3DEBB1B71B88C28A003BB09F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3DEBB1BD1B88C463003BB09F /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		3DEBB1BF1B88C51C003BB09F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3DEBB1C11B88C7BC003BB09F /* AlertJss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertJss.swift; path = ../AlertJss.swift; sourceTree = "<group>"; };
+		86713DEE8428728D5BB3C5B5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A6C4A7EE6F2F4169EA68C8F7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +67,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DEBB1AF1B88C0D5003BB09F /* Fabric.framework in Frameworks */,
+				3DEBB1B21B88C0D5003BB09F /* TwitterCore.framework in Frameworks */,
+				3DEBB1B01B88C0D5003BB09F /* TwitterKit.framework in Frameworks */,
+				3DEBB1B51B88C1AA003BB09F /* DigitsKit.framework in Frameworks */,
+				CD7923010E42A2E38560A0C4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +88,17 @@
 		3DEBB17C1B88A7D3003BB09F = {
 			isa = PBXGroup;
 			children = (
+				3DEBB1B31B88C1AA003BB09F /* DigitsKit.framework */,
+				3DEBB1B41B88C1AA003BB09F /* DigitsKitResources.bundle */,
+				3DEBB1AB1B88C0D5003BB09F /* Fabric.framework */,
+				3DEBB1AC1B88C0D5003BB09F /* TwitterKit.framework */,
+				3DEBB1AD1B88C0D5003BB09F /* TwitterKitResources.bundle */,
+				3DEBB1AE1B88C0D5003BB09F /* TwitterCore.framework */,
 				3DEBB1871B88A7D3003BB09F /* HachathonFiesp */,
 				3DEBB19D1B88A7D3003BB09F /* HachathonFiespTests */,
 				3DEBB1861B88A7D3003BB09F /* Products */,
+				6B6366F38CFFEDCB8B792557 /* Pods */,
+				C0C44FD18985030964A03DA5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,7 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				3DEBB18A1B88A7D3003BB09F /* AppDelegate.swift */,
-				3DEBB18C1B88A7D3003BB09F /* ViewController.swift */,
+				3DEBB1B91B88C292003BB09F /* Class */,
+				3DEBB1BC1B88C3CC003BB09F /* ViewControllers */,
 				3DEBB18E1B88A7D3003BB09F /* Main.storyboard */,
 				3DEBB1911B88A7D3003BB09F /* Images.xcassets */,
 				3DEBB1931B88A7D3003BB09F /* LaunchScreen.xib */,
@@ -112,6 +150,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3DEBB1B91B88C292003BB09F /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				3DEBB1C11B88C7BC003BB09F /* AlertJss.swift */,
+				3DEBB1BD1B88C463003BB09F /* TransitionManager.swift */,
+				3DEBB1B71B88C28A003BB09F /* User.swift */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		3DEBB1BC1B88C3CC003BB09F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3DEBB18C1B88A7D3003BB09F /* LoginViewController.swift */,
+				3DEBB1BF1B88C51C003BB09F /* HomeViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6B6366F38CFFEDCB8B792557 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1064EE9298B138CE238D7110 /* Pods.debug.xcconfig */,
+				86713DEE8428728D5BB3C5B5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0C44FD18985030964A03DA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6C4A7EE6F2F4169EA68C8F7 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DEBB1A41B88A7D3003BB09F /* Build configuration list for PBXNativeTarget "HachathonFiesp" */;
 			buildPhases = (
+				3695394F5CBBFCDBC5F364E6 /* Check Pods Manifest.lock */,
 				3DEBB1811B88A7D3003BB09F /* Sources */,
 				3DEBB1821B88A7D3003BB09F /* Frameworks */,
 				3DEBB1831B88A7D3003BB09F /* Resources */,
+				3DEBB1AA1B88BF8D003BB09F /* ShellScript */,
+				0E80F8028E7B2FED886C9C0C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,6 +269,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DEBB1B61B88C1AA003BB09F /* DigitsKitResources.bundle in Resources */,
+				3DEBB1B11B88C0D5003BB09F /* TwitterKitResources.bundle in Resources */,
 				3DEBB1901B88A7D3003BB09F /* Main.storyboard in Resources */,
 				3DEBB1951B88A7D3003BB09F /* LaunchScreen.xib in Resources */,
 				3DEBB1921B88A7D3003BB09F /* Images.xcassets in Resources */,
@@ -207,13 +286,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E80F8028E7B2FED886C9C0C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3695394F5CBBFCDBC5F364E6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3DEBB1AA1B88BF8D003BB09F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 813ff53536bc81411bc1c3cb59f8e1a0da6f7a3d eafcd316f8a63984bc9539c82b26f429a35218fd94797109a96eddc7b5a5d346\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3DEBB1811B88A7D3003BB09F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DEBB18D1B88A7D3003BB09F /* ViewController.swift in Sources */,
+				3DEBB1C01B88C51C003BB09F /* HomeViewController.swift in Sources */,
+				3DEBB18D1B88A7D3003BB09F /* LoginViewController.swift in Sources */,
+				3DEBB1BE1B88C463003BB09F /* TransitionManager.swift in Sources */,
+				3DEBB1C21B88C7BC003BB09F /* AlertJss.swift in Sources */,
 				3DEBB18B1B88A7D3003BB09F /* AppDelegate.swift in Sources */,
+				3DEBB1B81B88C28A003BB09F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,8 +469,13 @@
 		};
 		3DEBB1A51B88A7D3003BB09F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1064EE9298B138CE238D7110 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HachathonFiesp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,8 +484,13 @@
 		};
 		3DEBB1A61B88A7D3003BB09F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86713DEE8428728D5BB3C5B5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HachathonFiesp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,6 +550,7 @@
 				3DEBB1A61B88A7D3003BB09F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DEBB1A71B88A7D3003BB09F /* Build configuration list for PBXNativeTarget "HachathonFiespTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +559,7 @@
 				3DEBB1A91B88A7D3003BB09F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

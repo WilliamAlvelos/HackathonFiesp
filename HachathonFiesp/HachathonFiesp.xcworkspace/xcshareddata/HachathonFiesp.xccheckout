@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0829C9C4-99FD-4E1A-9E7E-0D504B6BA631</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HachathonFiesp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E08355B01E0093AFE18C7962E5ACF0B3D43538A5</key>
+		<string>https://github.com/WilliamAlvelos/HackathonFiesp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HachathonFiesp/HachathonFiesp.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E08355B01E0093AFE18C7962E5ACF0B3D43538A5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/WilliamAlvelos/HackathonFiesp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E08355B01E0093AFE18C7962E5ACF0B3D43538A5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E08355B01E0093AFE18C7962E5ACF0B3D43538A5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HackathonFiesp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
