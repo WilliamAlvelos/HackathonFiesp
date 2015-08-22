@@ -333,7 +333,7 @@ logging.basicConfig(filename='dilmaBot.log',level=logging.DEBUG,
 	format='%(asctime)s ---- %(message)s', datefmt='%d/%m/%Y %I:%M:%S %p')
 
 logging.info("\n\n\nroot: DILMABOT IS STARTING....")
-dilmaBot = telegrambot.Bot("87511348:AAFKifCABlltKzRr47c_3IHlmZkNmpzuxV8")
+dilmaBot = telegrambot.Bot("")
 if not dilmaBot.success:
 	logging.warning("root: DILMABOT FAILED TO START.... EXITING!")
 	sys.exit(1)
@@ -362,7 +362,7 @@ if "--auto-recovery" in sys.argv:
 
 
 logging.info("root: Starting Google Maps Client...")
-#gmaps = googlemaps.Client(key="AIzaSyADxKKWfF2-IXwEsTGG04lw-uVKNjZLl6g")
+#gmaps = googlemaps.Client(key="")
 try:
 	main(dilmaBot)
 except KeyboardInterrupt:
