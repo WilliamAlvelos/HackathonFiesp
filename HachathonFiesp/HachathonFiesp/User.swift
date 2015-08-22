@@ -7,20 +7,28 @@
 //
 
 import Foundation
+import UIKit
 
 class User: NSObject{
     
-    var name : String
+    var name = String()
     
-    var email: String
+    var email = String()
     
-    init(name : String  , email: String?=nil){
-        self.name = name
-        if(email != nil){
-            self.email = email!
-        }else{
-            self.email = ""
-        }
+    var image = UIImage()
+    
+    override init(){
+    
     }
-    //?=nil
+    
+    init(name: String){
+        self.name = name
+    }
+    
+    init(name : String  , email: String, image: UIImage){
+        self.name = name
+        self.email = email
+        self.image = image
+    }
+
 }

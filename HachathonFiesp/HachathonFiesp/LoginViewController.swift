@@ -9,6 +9,7 @@
 import UIKit
 import TwitterKit
 import DigitsKit
+import FBSDKLoginKit
 
 
 class LoginViewController: UIViewController {
@@ -19,43 +20,108 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Login"
+        
+//        var loginButton = FBSDKLoginButton()
+//        loginButton.center = self.view.center
+//        loginButton.center.y += loginButton.frame.height * 2
+//        loginButton.actionsForTarget("btnFBLoginPressed:", forControlEvent: UIControlEvents.AllEvents)
+//        self.view.addSubview(loginButton)
+        
         let authenticateButton = DGTAuthenticateButton(authenticationCompletion: {
             (session: DGTSession!, error: NSError!) in
             
             if(session != nil){
-                var user = User(name: "", email: "")
-                self.alertView.danger(self.navigationController!.view, title: "Teste", text: "Oi mih")
-                var view = TransitionManager.creatView("home") as! HomeViewController
+                var user = User()
+                var view = TransitionManager.creatView("register") as! RegisterViewController
                 view.user = user
                 self.navigationController?.pushViewController(view, animated: true)
                 
             }else{
-                self.alertView.danger(self.navigationController!.view, title: "Error", text: error.localizedDescription)
+                self.alertView.danger(self.navigationController!.view, title: "Error", text: error.localizedDescription, buttonText: "Ok")
             }
-                    })
+        })
         authenticateButton.center = self.view.center
         authenticateButton.center.y -= authenticateButton.frame.height * 2
         self.view.addSubview(authenticateButton)
 
         let logInButton = TWTRLogInButton { (session, error) in
             if(session != nil){
-                var user = User(name: session.userName, email: "")
-                self.alertView.danger(self.navigationController!.view, title: "Teste", text: "Oi mih")
-                var view = TransitionManager.creatView("home") as! HomeViewController
+                var user = User(name: session.userName)
+                var view = TransitionManager.creatView("register") as! RegisterViewController
                 view.user = user
-                
-                var nextView = TransitionManager.creatView("homeNav")
-                self.presentViewController(nextView, animated: true, completion: nil)
+                self.navigationController?.pushViewController(view, animated: true)
 //                self.navigationController?.pushViewController(nextView, animated: true)
-                
             }else{
-                self.alertView.danger(self.navigationController!.view, title: "Error", text: error.localizedDescription)
+                self.alertView.danger(self.navigationController!.view, title: "Error", text: error.localizedDescription, buttonText: "Ok")
             }
         }
         logInButton.center = self.view.center
         self.view.addSubview(logInButton)
-
     }
+    
+    
+    @IBAction func btnFBLoginPressed(sender: AnyObject) {
+        var fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        fbLoginManager .logInWithReadPermissions(["email"], handler: { (result, error) -> Void in
+            if (error == nil){
+                var fbloginresult : FBSDKLoginManagerLoginResult = result
+                if(fbloginresult.grantedPermissions.contains("email"))
+                {
+                    self.getFBUserData()
+                    fbLoginManager.logOut()
+                }
+            }
+        })
+    }
+    
+    
+    func getFBUserData(){
+        if((FBSDKAccessToken.currentAccessToken()) != nil){
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
+                if ((error) != nil)
+                {
+                    // Process error
+                    println("Error: \(error)")
+                }
+                else
+                {
+                    var id = result.valueForKey("id") as! String
+                    var name = result.valueForKey("name") as! String
+                    var email = result.valueForKey("email") as! String
+                    var image = "https://graph.facebook.com/\(id)/picture?type=large"
+                    
+                    
+                    var imageFacebook : UIImage?
+                    
+                    let url = NSURL(string: image)
+                    
+                    var request = NSMutableURLRequest(URL: url!)
+                    request.timeoutInterval = 5
+                    var response: NSURLResponse?
+                    var error: NSError?
+                    let urlData = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: &error)
+                    if urlData == nil || error != nil || NSString(data: urlData!, encoding: NSUTF8StringEncoding) != nil{
+                        imageFacebook = UIImage(named: "logo")
+                        
+                    }
+                    imageFacebook = UIImage(data: urlData!)
+                    
+                    let nextView = TransitionManager.creatView("register") as! RegisterViewController
+                    let user = User()
+                    user.name = name
+                    user.email = email
+                    user.image = imageFacebook!
+                    nextView.user = user
+                    
+                    
+                    self.navigationController?.pushViewController(nextView, animated: true)
+                    
+                }
+            })
+        }
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
