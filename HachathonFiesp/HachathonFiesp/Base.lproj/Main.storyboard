@@ -73,7 +73,7 @@
             </objects>
             <point key="canvasLocation" x="1250" y="217"/>
         </scene>
-        <!--Conta View Controller-->
+        <!--perfil-->
         <scene sceneID="no9-eQ-ylV">
             <objects>
                 <viewController id="vHe-Eh-T4g" customClass="ContaViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
@@ -118,7 +118,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icon_perfil" id="rc4-2s-MSc"/>
+                    <tabBarItem key="tabBarItem" title="perfil" image="icon_perfil" id="rc4-2s-MSc"/>
                     <connections>
                         <outlet property="imageUser" destination="e7D-r6-Mfp" id="qNf-r5-0Mh"/>
                         <outlet property="nomeUser" destination="Vt6-vR-DoT" id="bMk-2o-xEb"/>
@@ -198,7 +198,7 @@
             </objects>
             <point key="canvasLocation" x="2231.5" y="1906.5"/>
         </scene>
-        <!--Trabalhos Table View Controller-->
+        <!--serviços-->
         <scene sceneID="T6q-EA-LA7">
             <objects>
                 <tableViewController id="mHD-0E-sgI" customClass="TrabalhosTableViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
@@ -255,7 +255,7 @@
                             <outlet property="delegate" destination="mHD-0E-sgI" id="5kL-M8-eUa"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="" image="icon_servicos" id="SGd-AW-nlV"/>
+                    <tabBarItem key="tabBarItem" title="serviços" image="icon_servicos" id="SGd-AW-nlV"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qV3-C5-r7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -565,8 +565,8 @@
     <resources>
         <image name="icon_1024px" width="1024" height="1024"/>
         <image name="icon_camera" width="251" height="251"/>
-        <image name="icon_perfil" width="60" height="60"/>
-        <image name="icon_servicos" width="60" height="60"/>
+        <image name="icon_perfil" width="35" height="35"/>
+        <image name="icon_servicos" width="35" height="35"/>
         <image name="login_facebook" width="451" height="110"/>
         <image name="login_twitter" width="451" height="110"/>
     </resources>

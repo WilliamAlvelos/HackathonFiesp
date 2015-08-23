@@ -39,7 +39,6 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
             return controller
         })()
         
-        self.title = "Nome do APP"
         
         self.navigationController!.navigationBar.tintColor = Colors.Branco
         self.navigationController!.navigationBar.barTintColor = Colors.Azul
@@ -54,8 +53,6 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
         
         setupFirebase()
         
-        
-        self.navigationItem.title = "nome do APP"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

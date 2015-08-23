@@ -34,7 +34,7 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
             controller.searchBar.backgroundColor = Colors.Azul
             controller.searchBar.barTintColor = Colors.Azul
             self.tableView.tableHeaderView = controller.searchBar
-            controller.searchBar.tintColor = Colors.Rosa
+            controller.searchBar.tintColor = Colors.Branco
             return controller
         })()
         

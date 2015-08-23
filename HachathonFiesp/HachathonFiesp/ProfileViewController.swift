@@ -24,7 +24,6 @@ class ProfileViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBarController!.tabBar.barTintColor = UIColor(red: 13/255, green: 21/255, blue: 36/255, alpha: 1)
         
         self.imageUser?.layer.cornerRadius = self.imageUser.frame.size.height/2.0
         self.imageUser.layer.masksToBounds = true
@@ -37,7 +36,6 @@ class ProfileViewController : UIViewController{
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.title = user?.name
         
         self.imageUser.image = user?.image
         self.nome.text = user?.name
@@ -49,7 +47,6 @@ class ProfileViewController : UIViewController{
         
         if(UserDAODefault.logged()){
             CreatAChat(self.user?.image, name: self.user?.name, id:self.user!.id, tags: self.user!.tags)
-
         }else{
             ActionError.actionError("Erro", errorMessage: "Você não esta logado", view: self)
         }
