@@ -19,9 +19,7 @@ class ConversaTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.imagem.layer.cornerRadius = self.imagem.frame.size.height/2.0
         self.imagem.layer.masksToBounds = true
-        self.imagem.layer.borderWidth = CGFloat(0.6)
-        self.imagem.layer.borderColor = Colors.Rosa.CGColor
-        // Initialization code
+
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

@@ -22,7 +22,7 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
         super.viewDidLoad()
         
         self.tabBarController!.tabBar.barTintColor = UIColor(red: 13/255, green: 21/255, blue: 36/255, alpha: 1)
-        
+                
         self.navigationController?.navigationBar.barTintColor = Colors.Azul
         self.navigationController?.navigationBar.translucent = false
         self.resultSearchController = ({
@@ -50,7 +50,7 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
     }
     
     func reloadData(){
-        animateTable()
+        self.tableView.reloadData()
         self.refreshControle?.endRefreshing()
     }
     
@@ -97,9 +97,11 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
                 var user = User(id: id, nome: nome!, image: decodedImage, tags: tags!)
                 
                 self.conversas.append(user)
+                
+                self.tableView.reloadData()
             }
         })
-        self.animateTable()
+
     }
     
     override func didReceiveMemoryWarning() {

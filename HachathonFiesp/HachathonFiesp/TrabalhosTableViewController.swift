@@ -22,7 +22,9 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.tabBarController!.tabBar.tintColor = UIColor(red: 13/255, green: 21/255, blue: 36/255, alpha: 1)
+        UINavigationBar.appearance().barTintColor = Colors.Branco
+        
+
         self.tabBarController!.tabBar.barTintColor = UIColor(red: 13/255, green: 21/255, blue: 36/255, alpha: 1)
         
         self.navigationController?.navigationBar.barTintColor = Colors.Azul
@@ -63,7 +65,7 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
     }
     
     func reloadData(){
-        animateTable()
+        self.tableView.reloadData()
         self.refreshControle?.endRefreshing()
     }
     
@@ -112,11 +114,12 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
                 var user = User(id: id, descricao: descricao!, nome: nome!, image: decodedImage, email: email!, tags: tags!)
                 
                 self.trabalhos.append(user)
+                
+                self.tableView.reloadData()
             }
         })
         
         
-        self.animateTable()
         
         
     }

@@ -29,7 +29,6 @@ class ProfileViewController : UIViewController{
         
         self.imageUser?.layer.cornerRadius = self.imageUser.frame.size.height/2.0
         self.imageUser.layer.masksToBounds = true
-        self.title = user?.name
 //        self.imageUser.layer.borderWidth = CGFloat(2)
 //        self.imageUser.layer.borderColor = Colors.Rosa.CGColor
 //        
