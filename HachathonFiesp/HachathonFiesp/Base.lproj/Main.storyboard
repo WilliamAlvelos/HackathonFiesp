@@ -16,24 +16,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qca-Bn-YD2">
-                                <rect key="frame" x="169" y="520" width="36" height="30"/>
-                                <state key="normal" title="Pular">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="actionSkip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ws-nt-D5W"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF9-3o-FhJ">
-                                <rect key="frame" x="153" y="457" width="68" height="30"/>
-                                <state key="normal" title="Facebook">
+                                <rect key="frame" x="57" y="441" width="258" height="63"/>
+                                <state key="normal" backgroundImage="login_facebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="btnFBLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bdp-Hn-KYY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qca-Bn-YD2">
+                                <rect key="frame" x="145" y="564" width="84" height="43"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Pular">
+                                    <color key="titleColor" red="0.97409694660000001" green="0.97720766469999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionSkip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ws-nt-D5W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJT-CT-URi">
+                                <rect key="frame" x="57" y="344" width="259" height="63"/>
+                                <state key="normal" backgroundImage="login_twitter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTwitterTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wLp-rF-CFE"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_1024px" translatesAutoresizingMaskIntoConstraints="NO" id="eqA-sf-a7q">
+                                <rect key="frame" x="96" y="124" width="180" height="180"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -42,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456" y="243"/>
+            <point key="canvasLocation" x="455.5" y="242.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cqu-xT-kpZ">
@@ -376,7 +389,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xN-xg-KtN">
-                                <rect key="frame" x="107" y="76" width="150" height="150"/>
+                                <rect key="frame" x="107" y="57" width="150" height="150"/>
                                 <state key="normal" title=" ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -384,28 +397,28 @@
                                     <action selector="changeImage:" destination="RuQ-JZ-HFi" eventType="touchUpInside" id="a5b-wP-UvW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu Nome" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQt-U0-n7j">
-                                <rect key="frame" x="19" y="241" width="336" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite seu Nome" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQt-U0-n7j">
+                                <rect key="frame" x="19" y="267" width="336" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ld2-1i-9zC">
-                                <rect key="frame" x="19" y="300" width="336" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite seu email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ld2-1i-9zC">
+                                <rect key="frame" x="19" y="326" width="336" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite sua senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTY-L4-hXB">
-                                <rect key="frame" x="19" y="361" width="336" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite sua senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTY-L4-hXB">
+                                <rect key="frame" x="19" y="387" width="336" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repita sua senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0S-dA-YZe">
-                                <rect key="frame" x="19" y="422" width="336" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Repita sua senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0S-dA-YZe">
+                                <rect key="frame" x="19" y="448" width="336" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhK-yI-mFt">
-                                <rect key="frame" x="139" y="548" width="96" height="42"/>
+                                <rect key="frame" x="49" y="534" width="276" height="50"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
                                 <state key="normal" title="Avançar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -419,6 +432,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="avancar" destination="fhK-yI-mFt" id="fmT-8p-tS9"/>
                         <outlet property="emailTextField" destination="Ld2-1i-9zC" id="HuE-LY-2MK"/>
                         <outlet property="image" destination="6xN-xg-KtN" id="PjX-b7-GTu"/>
                         <outlet property="nomeTextField" destination="PQt-U0-n7j" id="5ru-cG-L7e"/>
@@ -543,4 +557,9 @@
             <point key="canvasLocation" x="418.5" y="1007.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_1024px" width="1024" height="1024"/>
+        <image name="login_facebook" width="451" height="110"/>
+        <image name="login_twitter" width="451" height="110"/>
+    </resources>
 </document>

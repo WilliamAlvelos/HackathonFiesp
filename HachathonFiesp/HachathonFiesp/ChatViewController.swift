@@ -74,7 +74,7 @@ class ChatViewController : JSQMessagesViewController, UIActionSheetDelegate, CLL
         setupFirebase()
         //setupImageFirebase()
         
-        self.title = "Conversa"
+        self.title = name
         
         let buttonEdit: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
         buttonEdit.frame = CGRectMake(0, 0, 40, 40)

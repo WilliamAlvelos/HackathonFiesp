@@ -29,6 +29,7 @@ class Registro2ViewController: UIViewController, CLLocationManagerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         setupImageFirebase()
+        self.view.backgroundColor = Colors.Azul
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
         // Do any additional setup after loading the view.

@@ -15,6 +15,23 @@ class LoginViewController: UIViewController {
     
     
     var alertView = AlertJss()
+    
+    
+    
+    @IBAction func buttonTwitterTouch(sender: AnyObject) {
+        Twitter.sharedInstance().logInWithCompletion { session, error in
+            if(session != nil){
+                var user = User(name: session.userName)
+                var view = TransitionManager.creatView("register") as! RegisterViewController
+                view.user = user
+                self.navigationController?.pushViewController(view, animated: true)
+                //                self.navigationController?.pushViewController(nextView, animated: true)
+            }else{
+                self.alertView.danger(self.navigationController!.view, title: "Error", text: error.localizedDescription, buttonText: "Ok")
+            }
+        }
+
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,42 +39,51 @@ class LoginViewController: UIViewController {
         
         self.title = "Login"
         
+        self.navigationController!.navigationBar.hidden = true
+        
+        self.view.backgroundColor = Colors.Azul
+        
+        self.navigationController!.navigationBar.barTintColor = Colors.Azul
+        
+        self.navigationController!.navigationBar.tintColor = Colors.Branco
+        
+        
+        let textAttributes = NSMutableDictionary(capacity:1)
+        textAttributes.setObject(Colors.Branco, forKey: NSForegroundColorAttributeName)
+        navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSObject : AnyObject]
+        
+        
+
+        
+        
 //        var loginButton = FBSDKLoginButton()
 //        loginButton.center = self.view.center
 //        loginButton.center.y += loginButton.frame.height * 2
 //        loginButton.actionsForTarget("btnFBLoginPressed:", forControlEvent: UIControlEvents.AllEvents)
 //        self.view.addSubview(loginButton)
         
-        let authenticateButton = DGTAuthenticateButton(authenticationCompletion: {
-            (session: DGTSession!, error: NSError!) in
-            
-            if(session != nil){
-                var user = User()
-                var view = TransitionManager.creatView("register") as! RegisterViewController
-                view.user = user
-                self.navigationController?.pushViewController(view, animated: true)
-                
-            }else{
-                self.alertView.danger(self.navigationController!.view, title: "Error", text: error.localizedDescription, buttonText: "Ok")
-            }
-        })
-        authenticateButton.center = self.view.center
-        authenticateButton.center.y -= authenticateButton.frame.height * 2
-        self.view.addSubview(authenticateButton)
+//        let authenticateButton = DGTAuthenticateButton(authenticationCompletion: {
+//            (session: DGTSession!, error: NSError!) in
+//            
+//
+//        })
+//        authenticateButton.center = self.view.center
+//        authenticateButton.center.y -= authenticateButton.frame.height * 2
+//        self.view.addSubview(authenticateButton)
 
-        let logInButton = TWTRLogInButton { (session, error) in
-            if(session != nil){
-                var user = User(name: session.userName)
-                var view = TransitionManager.creatView("register") as! RegisterViewController
-                view.user = user
-                self.navigationController?.pushViewController(view, animated: true)
-//                self.navigationController?.pushViewController(nextView, animated: true)
-            }else{
-                self.alertView.danger(self.navigationController!.view, title: "Error", text: error.localizedDescription, buttonText: "Ok")
-            }
-        }
-        logInButton.center = self.view.center
-        self.view.addSubview(logInButton)
+//        let logInButton = TWTRLogInButton { (session, error) in
+//            if(session != nil){
+//                var user = User(name: session.userName)
+//                var view = TransitionManager.creatView("register") as! RegisterViewController
+//                view.user = user
+//                self.navigationController?.pushViewController(view, animated: true)
+////                self.navigationController?.pushViewController(nextView, animated: true)
+//            }else{
+//                self.alertView.danger(self.navigationController!.view, title: "Error", text: error.localizedDescription, buttonText: "Ok")
+//            }
+//        }
+//        logInButton.center = self.view.center
+//        self.view.addSubview(logInButton)
     }
     
     

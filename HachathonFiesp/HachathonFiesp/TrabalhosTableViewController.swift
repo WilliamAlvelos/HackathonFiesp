@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, UISearchControllerDelegate{
+class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, UISearchControllerDelegate,UISearchResultsUpdating{
     
     var trabalhos:Array<User> = Array()
     var filteredTableData:Array<User> = Array()
@@ -28,6 +28,7 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
             controller.dimsBackgroundDuringPresentation = false
             controller.searchBar.sizeToFit()
             controller.searchBar.delegate = self
+            controller.searchResultsUpdater = self
             controller.searchBar.backgroundColor = Colors.Azul
             controller.searchBar.barTintColor = Colors.Azul
             self.tableView.tableHeaderView = controller.searchBar
@@ -37,6 +38,10 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
         
         self.title = "Nome do APP"
         
+        self.navigationController!.navigationBar.tintColor = Colors.Branco
+        self.navigationController!.navigationBar.barTintColor = Colors.Azul
+        self.navigationController!.navigationBar.translucent = false;
+    
         self.refreshControle = UIRefreshControl()
         self.refreshControle?.backgroundColor = Colors.Azul
         self.refreshControle?.tintColor = Colors.Rosa
@@ -45,6 +50,9 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
 
         
         setupFirebase()
+        
+        
+        self.navigationItem.title = "nome do APP"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -110,10 +118,21 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var view = TransitionManager.creatView("profileView") as! ProfileViewController
-        var user = self.trabalhos[indexPath.row]
-        view.user = user
-        self.navigationController?.pushViewController(view, animated: true)
+        
+        if(self.resultSearchController.active){
+            var view = TransitionManager.creatView("profileView") as! ProfileViewController
+            var user = self.filteredTableData[indexPath.row]
+            view.user = user
+            self.navigationController?.pushViewController(view, animated: true)
+        
+        }else{
+            var view = TransitionManager.creatView("profileView") as! ProfileViewController
+            var user = self.trabalhos[indexPath.row]
+            view.user = user
+            self.navigationController?.pushViewController(view, animated: true)
+        }
+        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -132,22 +151,44 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return trabalhos.count
+        if (self.resultSearchController.active) {
+            return self.filteredTableData.count
+        }
+        else {
+            return self.trabalhos.count
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("customCell", forIndexPath: indexPath) as! CustomTableViewCell
         
-        cell.nome.text = self.trabalhos[indexPath.row].name
-        cell.email.text = self.trabalhos[indexPath.row].email
-        cell.image2.image = self.trabalhos[indexPath.row].image
-        cell.descricao.text = self.trabalhos[indexPath.row].descricao
-        cell.tags.text = self.trabalhos[indexPath.row].tags
+
+        
+        
+        if (self.resultSearchController.active) {
+            
+            cell.nome.text = self.filteredTableData[indexPath.row].name
+            cell.email.text = self.filteredTableData[indexPath.row].email
+            cell.image2.image = self.filteredTableData[indexPath.row].image
+            cell.descricao.text = self.filteredTableData[indexPath.row].descricao
+            cell.tags.text = self.filteredTableData[indexPath.row].tags
+            
+            return cell
+        }
+        else {
+            
+            cell.nome.text = self.trabalhos[indexPath.row].name
+            cell.email.text = self.trabalhos[indexPath.row].email
+            cell.image2.image = self.trabalhos[indexPath.row].image
+            cell.descricao.text = self.trabalhos[indexPath.row].descricao
+            cell.tags.text = self.trabalhos[indexPath.row].tags
+            
+            return cell
+        }
         
 
         // Configure the cell...
 
-        return cell
     }
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
@@ -156,7 +197,7 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
         self.filteredTableData = self.trabalhos.filter {
             s in
             let options = NSStringCompareOptions.CaseInsensitiveSearch
-            let found = s.descricao.rangeOfString(target, options: options)
+            let found = s.tags.rangeOfString(target, options: options)
             return (found != nil)
         }
         self.tableView.reloadData()

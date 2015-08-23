@@ -79,7 +79,7 @@ class ProfileViewController : UIViewController{
     }
     
     @IBAction func actionRecomendar(sender: AnyObject) {
-        
+        ActionError.actionError("Parabéns", errorMessage: "Você recomendou com sucesso", view: self)
     }
     
     

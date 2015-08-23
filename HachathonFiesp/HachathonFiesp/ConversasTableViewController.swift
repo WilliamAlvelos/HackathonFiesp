@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ConversasTableViewController: UITableViewController,UISearchBarDelegate, UISearchControllerDelegate{
+class ConversasTableViewController: UITableViewController,UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating{
 
     
     var conversas:Array<User> = Array()
@@ -28,6 +28,7 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
             controller.dimsBackgroundDuringPresentation = false
             controller.searchBar.sizeToFit()
             controller.searchBar.delegate = self
+            controller.searchResultsUpdater = self
             controller.searchBar.backgroundColor = Colors.Azul
             controller.searchBar.barTintColor = Colors.Azul
             self.tableView.tableHeaderView = controller.searchBar
@@ -116,20 +117,37 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return self.conversas.count
+        
+        if (self.resultSearchController.active) {
+            return self.filteredTableData.count
+        }
+        else {
+            return self.conversas.count
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("conversaCell", forIndexPath: indexPath) as! ConversaTableViewCell
         
-        cell.imagem.image = self.conversas[indexPath.row].image
-        cell.labelNome.text = self.conversas[indexPath.row].name
-        cell.labelTags.text = self.conversas[indexPath.row].tags
+        
+        if (self.resultSearchController.active) {
+            cell.imagem.image = self.filteredTableData[indexPath.row].image
+            cell.labelNome.text = self.filteredTableData[indexPath.row].name
+            cell.labelTags.text = self.filteredTableData[indexPath.row].tags
+            
+            return cell
+        }
+        else {
+            
+            cell.imagem.image = self.conversas[indexPath.row].image
+            cell.labelNome.text = self.conversas[indexPath.row].name
+            cell.labelTags.text = self.conversas[indexPath.row].tags
+            
+            
+            return cell
+        }
         
         
-        // Configure the cell...
-        
-        return cell
     }
     
     
@@ -142,6 +160,7 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
          self.avatars.setValue(usuario, forKey: "\(user.id)")
         view.avatars = self.avatars
         view.conversa = indexPath.row
+        view.name = self.conversas[indexPath.row].name
         self.navigationController?.pushViewController(view, animated: true)
     }
     

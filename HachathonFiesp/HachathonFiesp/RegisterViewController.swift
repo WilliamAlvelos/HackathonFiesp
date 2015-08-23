@@ -18,7 +18,8 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     
     var base64String: NSString?
     
-    @IBOutlet var descricao: UITextView!
+    @IBOutlet var avancar: UIButton!
+    
     @IBOutlet var image: UIButton!
     @IBOutlet var senhaConfirmacao: UITextField!
     @IBOutlet var senhaTextField: UITextField!
@@ -26,11 +27,13 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet var nomeTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        self.navigationController?.navigationBar.hidden = false
+        self.navigationController!.navigationBar.barTintColor = Colors.Azul
+        self.navigationController?.navigationBar.translucent = false
+        self.view.backgroundColor = Colors.Azul
         self.image.layer.masksToBounds = true
         self.image.layer.borderWidth = CGFloat(2)
-        self.image.layer.borderColor = Colors.Rosa.CGColor
+        self.image.layer.borderColor = Colors.Branco.CGColor
         self.image.layer.cornerRadius = self.image.frame.height/2
         
         pickerLibrary = UIImagePickerController()
@@ -67,6 +70,25 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         PermissionsResponse.checkCameraPermission()
         PermissionsResponse.checkRollCameraPermission()
+        
+        
+        
+        
+    }
+    
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        UIMPConfiguration.addBorderToView(self.avancar, color: Colors.Branco, width: 3.0, corner: 25.0)
+//        UIMPConfiguration.addColorAndFontToButton(self.emailTextField, color: Colors.Rosa, fontName: FontName.ButtonFont, fontSize: 20)
+        UIMPConfiguration.configureTextField(self.nomeTextField, text: "qual o seu nome?")
+        UIMPConfiguration.configureTextField(self.emailTextField, text: "e o seu email?")
+        UIMPConfiguration.configureTextField(self.senhaTextField, text: "crie uma super-senha")
+        UIMPConfiguration.configureTextField(self.senhaConfirmacao, text: "confirme ela aqui")
+
+        UIMPConfiguration.addColorAndFontToButton(self.avancar, color: Colors.Branco, fontName: FontName.LabelFont, fontSize: 20)
         
     }
     
