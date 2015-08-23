@@ -375,7 +375,7 @@ class ChatViewController : JSQMessagesViewController, UIActionSheetDelegate, CLL
     
     
     override func didPressAccessoryButton(sender: UIButton!) {
-        var sheet:UIActionSheet = UIActionSheet(title: "Media messages", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Camera", "Rolo de Camera", "Send location")
+        var sheet:UIActionSheet = UIActionSheet(title: "Media messages", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Camera", "Rolo de Camera")
         
         
         let cameraAction = UIAlertAction(title: "Camera", style: .Default,handler: { (alert: UIAlertAction!) -> Void in
@@ -416,20 +416,6 @@ class ChatViewController : JSQMessagesViewController, UIActionSheetDelegate, CLL
             self.pickerLibrary?.sourceType = .PhotoLibrary
             self.pickerLibrary?.allowsEditing = true
             self.presentViewController(self.pickerLibrary!, animated: true, completion: nil)
-            
-        case 3:
-            
-            var weak:UICollectionView = self.collectionView
-            var locationItem: JSQLocationMediaItem = JSQLocationMediaItem()
-            
-            
-            locationItem.setLocation(self.locationManager.location, withCompletionHandler:nil)
-            
-            
-            self.sendLocation(self.locationManager.location.coordinate.latitude, longitude:self.locationManager.location.coordinate.longitude, sender: self.senderId, name: self.senderDisplayName)
-            
-            weak.reloadData()
-            break;
             
         default:
             break
