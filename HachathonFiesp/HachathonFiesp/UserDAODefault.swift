@@ -9,14 +9,15 @@
 import Foundation
 
 class UserDAODefault {
-    
-    
+
     class func saveLogin(user: User){
         let userFixo = NSUserDefaults.standardUserDefaults()
         userFixo.setBool(true, forKey: UserGlobalConstants.LoggedNow)
         userFixo.setObject(user.name, forKey: UserGlobalConstants.Name)
         userFixo.setObject(user.email, forKey: UserGlobalConstants.Email)
-        // userFixo.setObject(user.image, forKey: "user_image")
+        userFixo.setObject(user.image, forKey: UserGlobalConstants.Image)
+        userFixo.setObject(user.descricao, forKey: UserGlobalConstants.descricao)
+        userFixo.setObject(user.tags, forKey: UserGlobalConstants.tags)
         userFixo.synchronize()
     }
     
@@ -27,6 +28,10 @@ class UserDAODefault {
         
         user.name = (userFixo.objectForKey(UserGlobalConstants.Name) as? String)!
         user.email = (userFixo.objectForKey(UserGlobalConstants.Email) as? String)!
+        user.image = (userFixo.objectForKey(UserGlobalConstants.Image) as? UIImage)!
+        user.descricao = (userFixo.objectForKey(UserGlobalConstants.descricao) as? String)!
+        user.tags = (userFixo.objectForKey(UserGlobalConstants.tags) as? String)!
+        
         return user
     }
 }

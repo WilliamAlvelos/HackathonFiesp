@@ -13,11 +13,17 @@ class User: NSObject{
     
     var name = String()
     
+    var id = Int()
+    
     var email = String()
     
     var image = UIImage()
     
     var senha = String()
+    
+    var descricao = String()
+    
+    var tags = String()
     
     override init(){
     
@@ -33,5 +39,26 @@ class User: NSObject{
         self.image = image
         self.senha = senha
     }
+    
+    
+    init(id: Int, nome: String, image:UIImage, tags:String){
+        self.id = id
+        self.name = nome
+        self.image = image
+        self.tags = tags
+        
+    }
+    init(id:Int ,descricao:String, nome: String, image:UIImage, email: String, tags: String){
+        self.id = id
+        self.descricao = descricao
+        self.name = nome
+        self.image = image
+        self.email = email
+        self.tags = tags
+    }
+    
+    
+
+
 
 }

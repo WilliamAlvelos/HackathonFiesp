@@ -80,6 +80,16 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     }
 
     
+    @IBAction func actionAvancar(sender: AnyObject) {
+        var user = User(name: self.nomeTextField.text, email: self.emailTextField.text, image: self.image.backgroundImageForState(.Normal)!, senha: self.senhaTextField.text)
+        
+        var view = TransitionManager.creatView("registro2") as! Registro2ViewController
+        view.user = user
+        
+        
+        
+        self.navigationController?.pushViewController(view, animated: true)
+    }
     
     func changeImage(){
         
@@ -141,14 +151,11 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
      //MARK: - Navigation
 
      //In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-         //Get the new view controller using segue.destinationViewController.
-         //Pass the selected object to the new view controller.
-        var user = User(name: self.nomeTextField.text, email: self.emailTextField.text, image: self.image.backgroundImageForState(.Normal)!, senha: self.senhaTextField.text)
-        
-        var view = TransitionManager.creatView("registro2") as! Registro2ViewController
-        view.user = user
-        
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//         //Get the new view controller using segue.destinationViewController.
+//         //Pass the selected object to the new view controller.
+//
+//        
+//    }
 
 }

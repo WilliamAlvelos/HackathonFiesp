@@ -17,6 +17,8 @@ struct Colors {
 
 
 struct UserGlobalConstants {
+    static let descricao = "user_descricao"
+    static let tags = "user_tags"
     static let Id = "user_id"
     static let Name = "user_name"
     static let Email = "user_email"
@@ -26,6 +28,7 @@ struct UserGlobalConstants {
     static let Longitude = "user_longitude"
     static let Location = "user_location"
     static let LoggedNow = "logged"
+    
     
 }
 

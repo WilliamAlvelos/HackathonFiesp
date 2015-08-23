@@ -66,7 +66,7 @@ class ChatViewController : JSQMessagesViewController, UIActionSheetDelegate, CLL
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         
-        self.senderId = String(format: "%d", UserDAODefault.getLoggedUser().id!)
+        self.senderId = String(format: "%d", UserDAODefault.getLoggedUser().id)
         self.senderDisplayName = UserDAODefault.getLoggedUser().name
         if(self.senderDisplayName == nil){
             self.senderDisplayName = ""
@@ -104,15 +104,15 @@ class ChatViewController : JSQMessagesViewController, UIActionSheetDelegate, CLL
     }
     
     
-    func viewEvent(sender:AnyObject){
-        var nextView = TransitionManager.creatView("infoEvent") as! EventInfoViewController
-        nextView.event = self.event
-        
-        //if(self.)
-        nextView.dataPessoas = self.usuarios
-        self.navigationController?.pushViewController(nextView, animated: true)
-    }
-    
+//    func viewEvent(sender:AnyObject){
+//        var nextView = TransitionManager.creatView("infoEvent") as! EventInfoViewController
+//        nextView.event = self.event
+//        
+//        //if(self.)
+//        nextView.dataPessoas = self.usuarios
+//        self.navigationController?.pushViewController(nextView, animated: true)
+//    }
+//    
     
     
     

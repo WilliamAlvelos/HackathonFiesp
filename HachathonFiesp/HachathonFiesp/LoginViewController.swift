@@ -122,6 +122,11 @@ class LoginViewController: UIViewController {
         }
     }
 
+    @IBAction func actionSkip(sender: AnyObject) {
+        
+        var view = TransitionManager.creatView("homeNav")
+        self.presentViewController(view, animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
