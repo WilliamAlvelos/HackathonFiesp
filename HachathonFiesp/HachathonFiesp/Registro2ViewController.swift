@@ -86,7 +86,7 @@ class Registro2ViewController: UIViewController, CLLocationManagerDelegate{
             "descricao":descricao,
             "id":id,
             "tags":habilidades,
-            "moedas":0
+            "moedas":1
             ])
         
         var messagesRefID = Firebase(url: String(format: "https://hackathonfiesp.firebaseio.com/Users"))

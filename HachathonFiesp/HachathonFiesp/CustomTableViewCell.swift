@@ -18,6 +18,12 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet var tags: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.image2.layer.cornerRadius = self.image2.frame.size.height/2.0
+        self.image2.layer.masksToBounds = true
+        self.image2.layer.borderWidth = CGFloat(2)
+        self.image2.layer.borderColor = Colors.Rosa.CGColor
+        
         // Initialization code
     }
 

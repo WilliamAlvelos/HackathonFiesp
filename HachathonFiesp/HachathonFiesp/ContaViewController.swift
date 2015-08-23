@@ -40,7 +40,7 @@ class ContaViewController: UIViewController {
     @IBAction func actionLogOut(sender: AnyObject) {
         UserDAODefault.logOut()
         var view = TransitionManager.creatView("navLogin")
-        view.presentViewController(view , animated: false, completion: nil)
+        self.presentViewController(view , animated: false, completion: nil)
     }
 
     /*

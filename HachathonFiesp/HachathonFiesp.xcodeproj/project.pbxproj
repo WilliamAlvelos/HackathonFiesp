@@ -245,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				3D14EEB61B8961D500EC1137 /* CustomTableViewCell.swift */,
+				3D14EEC21B8990BC00EC1137 /* MoedasTableViewCell.swift */,
 				3D14EEBC1B8972BB00EC1137 /* ConversaTableViewCell.swift */,
 			);
 			name = CustomCell;
@@ -255,7 +256,6 @@
 			children = (
 				3D14EEB91B89721F00EC1137 /* ConversasTableViewController.swift */,
 				3D14EEC01B89908700EC1137 /* MoedasTableViewController.swift */,
-				3D14EEC21B8990BC00EC1137 /* MoedasTableViewCell.swift */,
 				3D14EEB41B895CB600EC1137 /* TrabalhosTableViewController.swift */,
 			);
 			name = TableViewControllers;
