@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF9-3o-FhJ">
-                                <rect key="frame" x="57" y="441" width="258" height="63"/>
+                                <rect key="frame" x="57" y="421" width="258" height="63"/>
                                 <state key="normal" backgroundImage="login_facebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qca-Bn-YD2">
-                                <rect key="frame" x="145" y="564" width="84" height="43"/>
+                                <rect key="frame" x="145" y="544" width="84" height="43"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
                                 <state key="normal" title="Pular">
                                     <color key="titleColor" red="0.97409694660000001" green="0.97720766469999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJT-CT-URi">
-                                <rect key="frame" x="57" y="344" width="259" height="63"/>
+                                <rect key="frame" x="57" y="324" width="259" height="63"/>
                                 <state key="normal" backgroundImage="login_twitter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_1024px" translatesAutoresizingMaskIntoConstraints="NO" id="eqA-sf-a7q">
-                                <rect key="frame" x="96" y="124" width="180" height="180"/>
+                                <rect key="frame" x="96" y="104" width="180" height="180"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -88,20 +88,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e7D-r6-Mfp">
                                 <rect key="frame" x="132" y="97" width="110" height="110"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vt6-vR-DoT">
-                                <rect key="frame" x="129" y="271" width="117" height="64"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z38-Pi-dDy">
-                                <rect key="frame" x="120" y="343" width="135" height="78"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="120" y="295" width="135" height="78"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.97409694660000001" green="0.97720766469999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pk-s2-8ci">
-                                <rect key="frame" x="135" y="478" width="105" height="58"/>
+                                <rect key="frame" x="135" y="466" width="105" height="58"/>
                                 <state key="normal" title="Log Out">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -110,17 +104,25 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg9-zX-yvn">
-                                <rect key="frame" x="113" y="429" width="147" height="48"/>
+                                <rect key="frame" x="64" y="373" width="246" height="69"/>
                                 <state key="normal" title="Comprar moedas">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vt6-vR-DoT">
+                                <rect key="frame" x="59" y="215" width="256" height="64"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.97409694660000001" green="0.97720766469999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="perfil" image="icon_perfil" id="rc4-2s-MSc"/>
                     <connections>
                         <outlet property="imageUser" destination="e7D-r6-Mfp" id="qNf-r5-0Mh"/>
+                        <outlet property="logOut" destination="0pk-s2-8ci" id="GbC-e7-jkD"/>
+                        <outlet property="moedas" destination="bg9-zX-yvn" id="1AG-aV-5yQ"/>
                         <outlet property="nomeUser" destination="Vt6-vR-DoT" id="bMk-2o-xEb"/>
                         <outlet property="tagsUser" destination="z38-Pi-dDy" id="9QG-Kx-cvm"/>
                     </connections>
@@ -287,7 +289,7 @@
                 <tabBarController modalTransitionStyle="flipHorizontal" id="PhN-hP-926" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Hqt-Dq-HKa"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="JPc-bf-myB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -393,7 +395,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhK-yI-mFt">
-                                <rect key="frame" x="49" y="534" width="276" height="50"/>
+                                <rect key="frame" x="49" y="523" width="276" height="50"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
                                 <state key="normal" title="Avançar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -403,22 +405,17 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite seu Nome" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQt-U0-n7j">
-                                <rect key="frame" x="19" y="267" width="336" height="30"/>
+                                <rect key="frame" x="72" y="270" width="230" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite seu email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ld2-1i-9zC">
-                                <rect key="frame" x="19" y="326" width="336" height="30"/>
+                                <rect key="frame" x="72" y="329" width="230" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite sua senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTY-L4-hXB">
-                                <rect key="frame" x="19" y="387" width="336" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Repita sua senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0S-dA-YZe">
-                                <rect key="frame" x="19" y="448" width="336" height="30"/>
+                                <rect key="frame" x="72" y="449" width="230" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
@@ -431,6 +428,11 @@
                                     <action selector="changeImage:" destination="RuQ-JZ-HFi" eventType="touchUpInside" id="a5b-wP-UvW"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite sua senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTY-L4-hXB">
+                                <rect key="frame" x="72" y="391" width="230" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -463,7 +465,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yT-Hs-TuV">
                                 <rect key="frame" x="43" y="287" width="289" height="50"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Registar-se">
+                                <state key="normal" title="Concluído">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -509,21 +511,21 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCX-U4-ea8">
                                 <rect key="frame" x="160" y="53" width="193" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="0.08235294118" green="0.3294117647" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofe-yF-sfB">
                                 <rect key="frame" x="160" y="118" width="169" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" red="0.08235294118" green="0.3294117647" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTO-DD-bwc">
                                 <rect key="frame" x="16" y="43" width="110" height="110"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Au6-wD-LfH">
-                                <rect key="frame" x="10" y="205" width="123" height="30"/>
+                                <rect key="frame" x="9" y="205" width="175" height="70"/>
                                 <state key="normal" title="Enviar Mensagem">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -533,12 +535,12 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U09-UF-KIx">
                                 <rect key="frame" x="16" y="252" width="343" height="245"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" red="0.08235294118" green="0.3294117647" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHd-1T-ExA">
-                                <rect key="frame" x="241" y="205" width="88" height="30"/>
+                                <rect key="frame" x="208" y="204" width="160" height="70.5"/>
                                 <state key="normal" title="Recomendar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -553,7 +555,9 @@
                     <connections>
                         <outlet property="descricao" destination="U09-UF-KIx" id="CnO-2Z-CSL"/>
                         <outlet property="imageUser" destination="JTO-DD-bwc" id="dwC-Lv-Gl0"/>
+                        <outlet property="mensagem" destination="Au6-wD-LfH" id="Tf6-cx-IeJ"/>
                         <outlet property="nome" destination="kCX-U4-ea8" id="JXO-RG-4zi"/>
+                        <outlet property="recomendar" destination="vHd-1T-ExA" id="dcf-wv-W1B"/>
                         <outlet property="tags" destination="Ofe-yF-sfB" id="OvT-9Z-pXN"/>
                     </connections>
                 </viewController>

@@ -18,7 +18,9 @@ class ProfileViewController : UIViewController{
     @IBOutlet var nome: UILabel!
     @IBOutlet var tags: UILabel!
     
+    @IBOutlet var mensagem: UIButton!
     var base64String: NSString?
+    @IBOutlet var recomendar: UIButton!
     
     @IBOutlet var descricao: UILabel!
     override func viewDidLoad() {
@@ -27,6 +29,7 @@ class ProfileViewController : UIViewController{
         
         self.imageUser?.layer.cornerRadius = self.imageUser.frame.size.height/2.0
         self.imageUser.layer.masksToBounds = true
+        self.title = user?.name
 //        self.imageUser.layer.borderWidth = CGFloat(2)
 //        self.imageUser.layer.borderColor = Colors.Rosa.CGColor
 //        
@@ -41,6 +44,24 @@ class ProfileViewController : UIViewController{
         self.tags.text = user?.tags
         self.descricao.text = user?.descricao
     }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        UIMPConfiguration.addBorderToView(self.mensagem, color: Colors.Azul, width: 3.0, corner: 25.0)
+        UIMPConfiguration.addBorderToView(self.recomendar, color: Colors.Azul, width: 3.0, corner: 25.0)
+        //        UIMPConfiguration.addColorAndFontToButton(self.emailTextField, color: Colors.Rosa, fontName: FontName.ButtonFont, fontSize: 20)
+
+        
+        
+        UIMPConfiguration.addColorAndFontToButton(self.mensagem, color: Colors.Azul, fontName: FontName.LabelFont, fontSize: 20)
+        
+        UIMPConfiguration.addColorAndFontToButton(self.recomendar, color: Colors.Azul, fontName: FontName.LabelFont, fontSize: 20)
+        
+    }
+    
+
     
     @IBAction func actionMensagem(sender: AnyObject) {
         

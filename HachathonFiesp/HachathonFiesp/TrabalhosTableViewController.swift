@@ -116,6 +116,9 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
         })
         
         
+        self.animateTable()
+        
+        
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

@@ -99,8 +99,7 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
                 self.conversas.append(user)
             }
         })
-        
-        
+        self.animateTable()
     }
     
     override func didReceiveMemoryWarning() {

@@ -15,9 +15,15 @@ class ContaViewController: UIViewController {
     @IBOutlet var nomeUser: UILabel!
     
     @IBOutlet var tagsUser: UILabel!
+    
+    @IBOutlet var moedas: UIButton!
+    
+    @IBOutlet var logOut: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = Colors.Azul
         
         if(UserDAODefault.logged()){
             var user = UserDAODefault.getLoggedUser()
@@ -45,6 +51,29 @@ class ContaViewController: UIViewController {
         self.presentViewController(view , animated: false, completion: nil)
     }
 
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+
+        
+        
+        UIMPConfiguration.addColorAndFontToButton(self.logOut, color: UIColor.redColor(), fontName: FontName.LabelFont, fontSize: 20)
+        
+        self.nomeUser.tintColor = Colors.Branco
+        
+        self.tagsUser.tintColor = Colors.Branco
+     
+        
+        UIMPConfiguration.addColorAndFontToButton(self.moedas, color: Colors.Branco, fontName: FontName.LabelFont, fontSize: 20)
+        
+        
+        UIMPConfiguration.addBorderToView(self.moedas, color: Colors.Branco, width: 3.0, corner: 25.0)
+        
+        UIMPConfiguration.addBorderToView(self.logOut, color: UIColor.redColor(), width: 3.0, corner: 25.0)
+        
+    }
+    
     /*
     // MARK: - Navigation
 
