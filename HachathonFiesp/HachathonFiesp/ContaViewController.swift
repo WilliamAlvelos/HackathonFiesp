@@ -25,7 +25,9 @@ class ContaViewController: UIViewController {
             self.nomeUser.text = user.name
             self.tagsUser.text = user.tags
         }else{
-            
+            ActionError.actionError("Erro", errorMessage: "Você não esta logado", view: self)
+            //var view = TransitionManager.creatView("navLogin") as! UINavigationController
+            //TransitionManager.changeView("navLogin", animated: false, view: self)
         }
         
         

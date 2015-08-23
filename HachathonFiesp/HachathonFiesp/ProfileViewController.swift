@@ -44,7 +44,14 @@ class ProfileViewController : UIViewController{
     }
     
     @IBAction func actionMensagem(sender: AnyObject) {
-        CreatAChat(self.user?.image, name: self.user?.name, id:self.user!.id, tags: self.user!.tags)
+        
+        if(UserDAODefault.logged()){
+            CreatAChat(self.user?.image, name: self.user?.name, id:self.user!.id, tags: self.user!.tags)
+
+        }else{
+            ActionError.actionError("Erro", errorMessage: "Você não esta logado", view: self)
+        }
+        
     }
     
     func CreatAChat(image: UIImage!, name:String!, id: Int, tags: String){
