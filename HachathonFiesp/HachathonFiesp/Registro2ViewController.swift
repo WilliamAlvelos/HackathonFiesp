@@ -8,14 +8,17 @@
 
 import UIKit
 import Firebase
+import CoreLocation
 
-class Registro2ViewController: UIViewController {
+class Registro2ViewController: UIViewController, CLLocationManagerDelegate{
 
     
     @IBOutlet var tags: UITextField!
     var user: User?
     
     var autoIncrement:Int = 0
+    
+    var locationManager = CLLocationManager()
     
     var base64String: NSString?
 
@@ -82,12 +85,52 @@ class Registro2ViewController: UIViewController {
             "senha":senha,
             "descricao":descricao,
             "id":id,
-            "tags":habilidades
+            "tags":habilidades,
+            "moedas":0
             ])
         
         var messagesRefID = Firebase(url: String(format: "https://hackathonfiesp.firebaseio.com/Users"))
         
         messagesRefID.childByAppendingPath("id").setValue(["id": id])
+        
+    }
+    
+    
+    func locationManager(manager: CLLocationManager!,
+        didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+            
+            //showActivity()
+            
+            var shouldIAllow = false
+            
+            switch status {
+            case CLAuthorizationStatus.AuthorizedAlways:
+                shouldIAllow = true
+            default:
+                //LOCATION IS RESTRICTED ********
+                //LOCATION IS RESTRICTED ********
+                //LOCATION IS RESTRICTED ********
+                return
+            }
+            
+            NSNotificationCenter.defaultCenter().postNotificationName("LabelHasbeenUpdated", object: nil)
+            
+            if (shouldIAllow == true) {
+                // Start location services
+                locationManager.startUpdatingLocation()
+            }
+            
+    }
+    
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        
+        locationManager.stopUpdatingLocation()
+        
+        var locationArray = locations as NSArray
+        var locationObj = locationArray.lastObject as! CLLocation
+        var coord = locationObj.coordinate
+        
         
     }
 

@@ -23,7 +23,7 @@ struct UserGlobalConstants {
     static let Name = "user_name"
     static let Email = "user_email"
     static let Password = "user_password"
-    static let Image = "user_picture"
+    static let Image = "user"
     static let Latitude = "user_latitude"
     static let Longitude = "user_longitude"
     static let Location = "user_location"

@@ -35,6 +35,8 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
             return controller
         })()
         
+        self.title = "Nome do APP"
+        
         self.refreshControle = UIRefreshControl()
         self.refreshControle?.backgroundColor = Colors.Azul
         self.refreshControle?.tintColor = Colors.Rosa
@@ -91,13 +93,14 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
             var image = snapshot.value["imageUser"] as? String
             var email = snapshot.value["email"] as? String
             var tags = snapshot.value["tags"] as? String
+            var moedas = snapshot.value["moeda"] as! Int
             
             
             if(descricao != nil){
                 var decodedData = NSData(base64EncodedString: image!, options: NSDataBase64DecodingOptions())
                 var decodedImage = UIImage(data: decodedData!)!
                 
-                var user = User(id: id, descricao: descricao!, nome: nome!, image: decodedImage, email: email!, tags: tags!)
+                var user = User(id: id, descricao: descricao!, nome: nome!, image: decodedImage, email: email!, tags: tags!, moeda: moedas)
                 
                 self.trabalhos.append(user)
             }

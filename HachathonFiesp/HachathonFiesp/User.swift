@@ -25,6 +25,8 @@ class User: NSObject{
     
     var tags = String()
     
+    var moedas = Int()
+    
     override init(){
     
     }
@@ -38,6 +40,16 @@ class User: NSObject{
         self.email = email
         self.image = image
         self.senha = senha
+    }
+    
+    init(id:Int ,descricao:String, nome: String, image:UIImage, email: String, tags: String, moeda: Int){
+        self.id = id
+        self.descricao = descricao
+        self.name = nome
+        self.image = image
+        self.email = email
+        self.tags = tags
+        self.moedas = moeda
     }
     
     
@@ -56,6 +68,10 @@ class User: NSObject{
         self.email = email
         self.tags = tags
     }
+    
+
+    
+    
     
     
 

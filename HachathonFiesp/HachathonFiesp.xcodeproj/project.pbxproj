@@ -27,6 +27,8 @@
 		3D14EEBA1B89721F00EC1137 /* ConversasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D14EEB91B89721F00EC1137 /* ConversasTableViewController.swift */; };
 		3D14EEBD1B8972BB00EC1137 /* ConversaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D14EEBC1B8972BB00EC1137 /* ConversaTableViewCell.swift */; };
 		3D14EEBF1B8986F200EC1137 /* ContaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D14EEBE1B8986F200EC1137 /* ContaViewController.swift */; };
+		3D14EEC11B89908700EC1137 /* MoedasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D14EEC01B89908700EC1137 /* MoedasTableViewController.swift */; };
+		3D14EEC31B8990BC00EC1137 /* MoedasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D14EEC21B8990BC00EC1137 /* MoedasTableViewCell.swift */; };
 		3D3BC1EC1B88D99D0010D23C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BC1EB1B88D99D0010D23C /* RegisterViewController.swift */; };
 		3DEBB18B1B88A7D3003BB09F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBB18A1B88A7D3003BB09F /* AppDelegate.swift */; };
 		3DEBB18D1B88A7D3003BB09F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEBB18C1B88A7D3003BB09F /* LoginViewController.swift */; };
@@ -124,6 +126,8 @@
 		3D14EEB91B89721F00EC1137 /* ConversasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversasTableViewController.swift; sourceTree = "<group>"; };
 		3D14EEBC1B8972BB00EC1137 /* ConversaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversaTableViewCell.swift; sourceTree = "<group>"; };
 		3D14EEBE1B8986F200EC1137 /* ContaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContaViewController.swift; sourceTree = "<group>"; };
+		3D14EEC01B89908700EC1137 /* MoedasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoedasTableViewController.swift; sourceTree = "<group>"; };
+		3D14EEC21B8990BC00EC1137 /* MoedasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoedasTableViewCell.swift; sourceTree = "<group>"; };
 		3D3BC1EB1B88D99D0010D23C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3DEBB1851B88A7D3003BB09F /* HachathonFiesp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HachathonFiesp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DEBB1891B88A7D3003BB09F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				3D14EEB91B89721F00EC1137 /* ConversasTableViewController.swift */,
+				3D14EEC01B89908700EC1137 /* MoedasTableViewController.swift */,
+				3D14EEC21B8990BC00EC1137 /* MoedasTableViewCell.swift */,
 				3D14EEB41B895CB600EC1137 /* TrabalhosTableViewController.swift */,
 			);
 			name = TableViewControllers;
@@ -528,8 +534,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D14EEC31B8990BC00EC1137 /* MoedasTableViewCell.swift in Sources */,
 				3D14EEB71B8961D500EC1137 /* CustomTableViewCell.swift in Sources */,
 				3D14EE641B88EA7A00EC1137 /* GlobalContants.swift in Sources */,
+				3D14EEC11B89908700EC1137 /* MoedasTableViewController.swift in Sources */,
 				3D14EEBD1B8972BB00EC1137 /* ConversaTableViewCell.swift in Sources */,
 				3D14EE671B8902BA00EC1137 /* UserDAODefault.swift in Sources */,
 				3D14EEBF1B8986F200EC1137 /* ContaViewController.swift in Sources */,

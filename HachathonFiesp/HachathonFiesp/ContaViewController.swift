@@ -10,14 +10,22 @@ import UIKit
 
 class ContaViewController: UIViewController {
 
+    @IBOutlet var imageUser: UIImageView!
+    
+    @IBOutlet var nomeUser: UILabel!
+    
+    @IBOutlet var tagsUser: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        if(UserDAODefault.getLoggedUser() != nil){
-            
+        if(UserDAODefault.logged()){
+            var user = UserDAODefault.getLoggedUser()
+            self.imageUser.image = user.image
+            self.nomeUser.text = user.name
+            self.tagsUser.text = user.tags
         }else{
-        
+            
         }
         
         
@@ -29,6 +37,11 @@ class ContaViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func actionLogOut(sender: AnyObject) {
+        UserDAODefault.logOut()
+        var view = TransitionManager.creatView("navLogin")
+        view.presentViewController(view , animated: false, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
