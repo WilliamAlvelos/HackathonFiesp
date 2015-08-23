@@ -78,7 +78,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        UIMPConfiguration.addBorderToView(self.avancar, color: Colors.Branco, width: 3.0, corner: 25.0)
+        UIMPConfiguration.addBorderToView(self.avancar, color: Colors.Branco, width: 2.0, corner: 25.0)
 //        UIMPConfiguration.addColorAndFontToButton(self.emailTextField, color: Colors.Rosa, fontName: FontName.ButtonFont, fontSize: 20)
         UIMPConfiguration.configureTextField(self.nomeTextField, text: "qual o seu nome?")
         UIMPConfiguration.configureTextField(self.emailTextField, text: "e o seu email?")
