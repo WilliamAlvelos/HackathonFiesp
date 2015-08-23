@@ -34,6 +34,7 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
             controller.dimsBackgroundDuringPresentation = false
             controller.searchBar.sizeToFit()
             controller.searchBar.delegate = self
+            controller.searchBar.placeholder = "Pesquise pelo serviço desejado"
             controller.searchResultsUpdater = self
             controller.searchBar.backgroundColor = Colors.Azul
             controller.searchBar.barTintColor = Colors.Azul
@@ -45,8 +46,6 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
         
         self.navigationController!.navigationBar.tintColor = Colors.Branco
         self.navigationController!.navigationBar.barTintColor = Colors.Azul
-        self.navigationController!.navigationBar.translucent = false;
-    
         self.refreshControle = UIRefreshControl()
         self.refreshControle?.backgroundColor = Colors.Azul
         self.refreshControle?.tintColor = Colors.Branco

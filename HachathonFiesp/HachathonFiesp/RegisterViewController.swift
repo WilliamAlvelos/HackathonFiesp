@@ -80,10 +80,10 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         UIMPConfiguration.addBorderToView(self.avancar, color: Colors.Branco, width: 2.0, corner: 25.0)
 //        UIMPConfiguration.addColorAndFontToButton(self.emailTextField, color: Colors.Rosa, fontName: FontName.ButtonFont, fontSize: 20)
-        UIMPConfiguration.configureTextField(self.nomeTextField, text: "qual o seu nome?")
-        UIMPConfiguration.configureTextField(self.emailTextField, text: "e o seu email?")
-        UIMPConfiguration.configureTextField(self.senhaTextField, text: "crie uma super-senha")
-        UIMPConfiguration.configureTextField(self.senhaConfirmacao, text: "confirme ela aqui")
+        UIMPConfiguration.configureTextField(self.nomeTextField, text: "Nome completo")
+        UIMPConfiguration.configureTextField(self.emailTextField, text: "E-mail")
+        UIMPConfiguration.configureTextField(self.senhaTextField, text: "Crie uma senha")
+        UIMPConfiguration.configureTextField(self.senhaConfirmacao, text: "Repita a senha")
 
         UIMPConfiguration.addColorAndFontToButton(self.avancar, color: Colors.Branco, fontName: FontName.LabelFont, fontSize: 20)
         

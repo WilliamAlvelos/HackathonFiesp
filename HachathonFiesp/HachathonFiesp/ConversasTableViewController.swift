@@ -22,7 +22,7 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
         super.viewDidLoad()
         
         self.tabBarController!.tabBar.barTintColor = UIColor(red: 13/255, green: 21/255, blue: 36/255, alpha: 1)
-                
+        
         self.navigationController?.navigationBar.barTintColor = Colors.Azul
         self.navigationController?.navigationBar.translucent = false
         self.resultSearchController = ({
@@ -30,6 +30,7 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
             controller.dimsBackgroundDuringPresentation = false
             controller.searchBar.sizeToFit()
             controller.searchBar.delegate = self
+            controller.searchBar.placeholder = "Pesquise pelo serviço desejado"
             controller.searchResultsUpdater = self
             controller.searchBar.backgroundColor = Colors.Azul
             controller.searchBar.barTintColor = Colors.Azul
