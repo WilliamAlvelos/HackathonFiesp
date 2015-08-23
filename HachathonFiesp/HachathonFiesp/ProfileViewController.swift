@@ -43,12 +43,10 @@ class ProfileViewController : UIViewController{
     }
     
     @IBAction func actionMensagem(sender: AnyObject) {
-        
-        
-        
+        CreatAChat(self.user?.image, name: self.user?.name, id:self.user!.id, tags: self.user!.tags)
     }
     
-    func CreatAChat(image: UIImage!, name:String!, email: String!, senha:String!, descricao:String!, id:Int!, habilidades:String!){
+    func CreatAChat(image: UIImage!, name:String!, id: Int, tags: String){
         
         var messagesRef = Firebase(url: String(format: "https://hackathonfiesp.firebaseio.com/Mensagem"))
         
@@ -62,7 +60,6 @@ class ProfileViewController : UIViewController{
         messagesRef.childByAppendingPath(String(id)).setValue([
             "imageConversa": self.base64String!,
             "nome":name,
-            "email":email,
             "id":id
             ])
         
