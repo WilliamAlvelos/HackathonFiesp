@@ -13,20 +13,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF9-3o-FhJ">
-                                <rect key="frame" x="266" y="433" width="68" height="30"/>
-                                <state key="normal" title="Facebook">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnFBLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bdp-Hn-KYY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qca-Bn-YD2">
-                                <rect key="frame" x="277" y="506" width="36" height="30"/>
+                                <rect key="frame" x="169" y="520" width="36" height="30"/>
                                 <state key="normal" title="Pular">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -34,10 +25,20 @@
                                     <action selector="actionSkip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ws-nt-D5W"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF9-3o-FhJ">
+                                <rect key="frame" x="153" y="457" width="68" height="30"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFBLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bdp-Hn-KYY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="RBo-Nx-pmB"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,7 +119,7 @@
         <!--Conversas-->
         <scene sceneID="8pf-KM-rAk">
             <objects>
-                <tableViewController id="Jkd-Yq-pPH" sceneMemberID="viewController">
+                <tableViewController id="Jkd-Yq-pPH" customClass="ConversasTableViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="22" sectionFooterHeight="22" id="ell-DS-Xm6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,6 +165,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiK-N3-pxl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1765.5" y="1906.5"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="BgI-xU-RYi">
+            <objects>
+                <viewController storyboardIdentifier="chatView" id="cfO-om-BhF" customClass="ChatViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dis-Wx-KGK"/>
+                        <viewControllerLayoutGuide type="bottom" id="a76-ge-uVL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pdq-bn-XRs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CW4-3z-V9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2231.5" y="1906.5"/>
         </scene>
         <!--Usuários-->
         <scene sceneID="T6q-EA-LA7">

@@ -21,13 +21,16 @@ class Registro2ViewController: UIViewController, CLLocationManagerDelegate{
     var locationManager = CLLocationManager()
     
     var base64String: NSString?
+    
+    var coordenada = CLLocationCoordinate2D()
 
     @IBOutlet var descricao: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupImageFirebase()
-        
+        locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -77,7 +80,6 @@ class Registro2ViewController: UIViewController, CLLocationManagerDelegate{
         
         self.base64String = imageData.base64EncodedStringWithOptions(.allZeros)
         
-        
         messagesRef.childByAppendingPath(String(id)).setValue([
             "imageUser": self.base64String!,
             "nome":name,
@@ -92,6 +94,8 @@ class Registro2ViewController: UIViewController, CLLocationManagerDelegate{
         var messagesRefID = Firebase(url: String(format: "https://hackathonfiesp.firebaseio.com/Users"))
         
         messagesRefID.childByAppendingPath("id").setValue(["id": id])
+        
+        print(self.coordenada.latitude)
         
     }
     
@@ -130,7 +134,7 @@ class Registro2ViewController: UIViewController, CLLocationManagerDelegate{
         var locationArray = locations as NSArray
         var locationObj = locationArray.lastObject as! CLLocation
         var coord = locationObj.coordinate
-        
+        self.coordenada = coord
         
     }
 

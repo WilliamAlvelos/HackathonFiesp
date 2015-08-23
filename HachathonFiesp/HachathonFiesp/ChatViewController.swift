@@ -57,11 +57,8 @@ class ChatViewController : JSQMessagesViewController, UIActionSheetDelegate, CLL
         activity = activityIndicator(view: self.navigationController!, texto: "Buscando Mensagens", inverse: false, viewController:self)
         
         
-        
-        
         pickerLibrary = UIImagePickerController()
         pickerLibrary?.delegate = self
-        
         
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
@@ -349,7 +346,7 @@ class ChatViewController : JSQMessagesViewController, UIActionSheetDelegate, CLL
             return self.avatars[message!.senderId] as! JSQMessageAvatarImageDataSource
         }
         
-        var jsqImage:JSQMessagesAvatarImage = JSQMessagesAvatarImageFactory.avatarImageWithUserInitials("MID", backgroundColor: Colors.Rosa, textColor: Colors.Azul, font: UIFont.systemFontOfSize(14.0), diameter:UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+        var jsqImage:JSQMessagesAvatarImage = JSQMessagesAvatarImageFactory.avatarImageWithUserInitials("EXP", backgroundColor: Colors.Rosa, textColor: Colors.Azul, font: UIFont.systemFontOfSize(14.0), diameter:UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
         
         var avatar = [message.senderId: jsqImage]
         

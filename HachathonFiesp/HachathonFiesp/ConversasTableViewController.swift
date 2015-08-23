@@ -14,9 +14,8 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
     
     var conversas:Array<User> = Array()
     var filteredTableData:Array<User> = Array()
-    
     var resultSearchController = UISearchController()
-    
+    var avatars = NSMutableDictionary()
     var refreshControle: UIRefreshControl?
     
     override func viewDidLoad() {
@@ -78,12 +77,12 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
     
     func setupFirebase(){
         
-        var ref = Firebase(url: String(format: "https://hackathonfiesp.firebaseio.com/Conversas"))
+        var ref = Firebase(url: String(format: "https://hackathonfiesp.firebaseio.com/Mensagem"))
         
         ref.observeEventType(FEventType.ChildAdded, withBlock: { (snapshot) -> Void in
             var id = snapshot.value["id"] as! Int
             var nome = snapshot.value["nome"] as? String
-            var image = snapshot.value["imageUser"] as? String
+            var image = snapshot.value["imageConversa"] as? String
             var tags = snapshot.value["tags"] as? String
             
             
@@ -132,6 +131,21 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
         
         return cell
     }
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var view = TransitionManager.creatView("chatView") as! ChatViewController
+        var user = self.conversas[indexPath.row]
+        
+        self.avatars.removeAllObjects()
+        var usuario :JSQMessagesAvatarImage = JSQMessagesAvatarImageFactory.avatarImageWithImage(self.conversas[indexPath.row].image, diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+         self.avatars.setValue(usuario, forKey: "\(user.id)")
+        view.avatars = self.avatars
+        view.conversa = indexPath.row
+        self.navigationController?.pushViewController(view, animated: true)
+    }
+    
+    
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         let sb = searchController.searchBar

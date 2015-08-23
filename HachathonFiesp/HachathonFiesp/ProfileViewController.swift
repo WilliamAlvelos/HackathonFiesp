@@ -34,7 +34,8 @@ class ProfileViewController : UIViewController{
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-
+        
+        self.title = user?.name
         
         self.imageUser.image = user?.image
         self.nome.text = user?.name
@@ -60,7 +61,8 @@ class ProfileViewController : UIViewController{
         messagesRef.childByAppendingPath(String(id)).setValue([
             "imageConversa": self.base64String!,
             "nome":name,
-            "id":id
+            "id":id,
+            "tags": tags
             ])
         
 //        var messagesRefID = Firebase(url: String(format: "https://hackathonfiesp.firebaseio.com/Users"))
