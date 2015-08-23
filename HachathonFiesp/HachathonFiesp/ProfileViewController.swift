@@ -24,6 +24,8 @@ class ProfileViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarController!.tabBar.barTintColor = UIColor(red: 13/255, green: 21/255, blue: 36/255, alpha: 1)
+        
         self.imageUser?.layer.cornerRadius = self.imageUser.frame.size.height/2.0
         self.imageUser.layer.masksToBounds = true
 //        self.imageUser.layer.borderWidth = CGFloat(2)

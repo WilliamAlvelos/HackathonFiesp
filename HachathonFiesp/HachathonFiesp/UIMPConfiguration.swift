@@ -12,7 +12,7 @@ import Foundation
 class UIMPConfiguration {
     class func configureTextField(textField: UITextField, text: String){
         textField.attributedPlaceholder = NSAttributedString(string:text,
-            attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+            attributes:[NSForegroundColorAttributeName: Colors.Branco])
         UIMPConfiguration.addBottomLineToView(textField, bottomSize: 0.5)
         textField.textColor = Colors.Branco
     }

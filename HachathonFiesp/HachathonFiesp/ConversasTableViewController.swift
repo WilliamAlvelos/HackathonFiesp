@@ -21,6 +21,8 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarController!.tabBar.barTintColor = UIColor(red: 13/255, green: 21/255, blue: 36/255, alpha: 1)
+        
         self.navigationController?.navigationBar.barTintColor = Colors.Azul
         self.navigationController?.navigationBar.translucent = false
         self.resultSearchController = ({

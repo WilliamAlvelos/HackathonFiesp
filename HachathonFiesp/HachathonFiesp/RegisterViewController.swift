@@ -90,6 +90,9 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
 
         UIMPConfiguration.addColorAndFontToButton(self.avancar, color: Colors.Branco, fontName: FontName.LabelFont, fontSize: 20)
         
+        
+
+        
     }
     
     @IBAction func changeImage(sender: AnyObject) {
@@ -149,6 +152,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         data.writeToFile(self.imagePathURL().path!, atomically: true)
         
         self.image.setBackgroundImage(image, forState: .Normal)
+
         
         //user?.image = image
         self.dismissViewControllerAnimated(true, completion: nil)

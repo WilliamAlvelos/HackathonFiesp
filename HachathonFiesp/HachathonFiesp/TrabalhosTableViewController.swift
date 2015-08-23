@@ -21,6 +21,9 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        self.tabBarController!.tabBar.tintColor = UIColor(red: 13/255, green: 21/255, blue: 36/255, alpha: 1)
+        self.tabBarController!.tabBar.barTintColor = UIColor(red: 13/255, green: 21/255, blue: 36/255, alpha: 1)
+        
         self.navigationController?.navigationBar.barTintColor = Colors.Azul
         self.navigationController?.navigationBar.translucent = false
         self.resultSearchController = ({
@@ -32,7 +35,7 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
             controller.searchBar.backgroundColor = Colors.Azul
             controller.searchBar.barTintColor = Colors.Azul
             self.tableView.tableHeaderView = controller.searchBar
-            controller.searchBar.tintColor = Colors.Rosa
+            controller.searchBar.tintColor = Colors.Branco
             return controller
         })()
         
@@ -44,7 +47,7 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
     
         self.refreshControle = UIRefreshControl()
         self.refreshControle?.backgroundColor = Colors.Azul
-        self.refreshControle?.tintColor = Colors.Rosa
+        self.refreshControle?.tintColor = Colors.Branco
         self.refreshControle?.addTarget(self, action: Selector("reloadData"), forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(self.refreshControle!)
 

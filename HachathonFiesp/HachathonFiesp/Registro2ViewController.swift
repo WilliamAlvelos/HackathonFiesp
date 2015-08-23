@@ -18,13 +18,14 @@ class Registro2ViewController: UIViewController, CLLocationManagerDelegate{
     
     var autoIncrement:Int = 0
     
+    @IBOutlet var resgitar: UIButton!
     var locationManager = CLLocationManager()
     
     var base64String: NSString?
     
     var coordenada = CLLocationCoordinate2D()
 
-    @IBOutlet var descricao: UITextView!
+    @IBOutlet var descricao: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,20 @@ class Registro2ViewController: UIViewController, CLLocationManagerDelegate{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        UIMPConfiguration.addBorderToView(self.resgitar, color: Colors.Branco, width: 3.0, corner: 25.0)
+        //        UIMPConfiguration.addColorAndFontToButton(self.emailTextField, color: Colors.Rosa, fontName: FontName.ButtonFont, fontSize: 20)
+        UIMPConfiguration.configureTextField(self.tags, text: "Habilidades")
+        UIMPConfiguration.configureTextField(self.descricao, text: "Digite sua descriçāo")
+
+        
+        UIMPConfiguration.addColorAndFontToButton(self.resgitar, color: Colors.Branco, fontName: FontName.LabelFont, fontSize: 20)
+        
     }
     
     
@@ -57,13 +72,14 @@ class Registro2ViewController: UIViewController, CLLocationManagerDelegate{
     
     @IBAction func RegisterAction(sender: AnyObject) {
         
+        
         registerUser(self.user!.image, name: self.user!.name, email: self.user!.email, senha: self.user!.senha, descricao: self.descricao.text, id: self.autoIncrement, habilidades: self.tags.text)
         
         
         var usuarioDefault = User(id: self.user!.id, descricao: self.descricao.text, nome: self.user!.name, image: self.user!.image, email: self.user!.email, tags: self.tags.text)
         
         
-        UserDAODefault.saveLogin(user!)
+        UserDAODefault.saveLogin(usuarioDefault)
         
         var nextView = TransitionManager.creatView("homeNav")
         

@@ -73,7 +73,7 @@
             </objects>
             <point key="canvasLocation" x="1250" y="217"/>
         </scene>
-        <!--Profile-->
+        <!--Conta View Controller-->
         <scene sceneID="no9-eQ-ylV">
             <objects>
                 <viewController id="vHe-Eh-T4g" customClass="ContaViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
@@ -118,7 +118,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="rc4-2s-MSc"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon_perfil" id="rc4-2s-MSc"/>
                     <connections>
                         <outlet property="imageUser" destination="e7D-r6-Mfp" id="qNf-r5-0Mh"/>
                         <outlet property="nomeUser" destination="Vt6-vR-DoT" id="bMk-2o-xEb"/>
@@ -198,7 +198,7 @@
             </objects>
             <point key="canvasLocation" x="2231.5" y="1906.5"/>
         </scene>
-        <!--Usuários-->
+        <!--Trabalhos Table View Controller-->
         <scene sceneID="T6q-EA-LA7">
             <objects>
                 <tableViewController id="mHD-0E-sgI" customClass="TrabalhosTableViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
@@ -255,7 +255,7 @@
                             <outlet property="delegate" destination="mHD-0E-sgI" id="5kL-M8-eUa"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Usuários" id="SGd-AW-nlV"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon_servicos" id="SGd-AW-nlV"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qV3-C5-r7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -284,11 +284,12 @@
         <!--Tab Bar Controller-->
         <scene sceneID="gCr-fW-mkC">
             <objects>
-                <tabBarController id="PhN-hP-926" sceneMemberID="viewController">
+                <tabBarController modalTransitionStyle="flipHorizontal" id="PhN-hP-926" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Hqt-Dq-HKa"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="JPc-bf-myB">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="JPc-bf-myB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -381,6 +382,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_camera" translatesAutoresizingMaskIntoConstraints="NO" id="UG3-Um-owv">
+                                <rect key="frame" x="112" y="57" width="150" height="150"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONT-Q1-YwV">
                                 <rect key="frame" x="163" y="654" width="87" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -388,13 +392,14 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xN-xg-KtN">
-                                <rect key="frame" x="107" y="57" width="150" height="150"/>
-                                <state key="normal" title=" ">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhK-yI-mFt">
+                                <rect key="frame" x="49" y="534" width="276" height="50"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Avançar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeImage:" destination="RuQ-JZ-HFi" eventType="touchUpInside" id="a5b-wP-UvW"/>
+                                    <action selector="actionAvancar:" destination="RuQ-JZ-HFi" eventType="touchUpInside" id="k0N-vy-Fw2"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite seu Nome" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQt-U0-n7j">
@@ -417,14 +422,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhK-yI-mFt">
-                                <rect key="frame" x="49" y="534" width="276" height="50"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
-                                <state key="normal" title="Avançar">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xN-xg-KtN">
+                                <rect key="frame" x="112" y="57" width="150" height="150"/>
+                                <state key="normal" title=" " backgroundImage="icon_camera">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="actionAvancar:" destination="RuQ-JZ-HFi" eventType="touchUpInside" id="k0N-vy-Fw2"/>
+                                    <action selector="changeImage:" destination="RuQ-JZ-HFi" eventType="touchUpInside" id="a5b-wP-UvW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -456,14 +460,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" text="Digite aqui sua Descriçāo" translatesAutoresizingMaskIntoConstraints="NO" id="Fpg-0A-8Ae">
-                                <rect key="frame" x="41" y="135" width="310" height="199"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yT-Hs-TuV">
-                                <rect key="frame" x="130" y="342" width="114" height="67"/>
+                                <rect key="frame" x="43" y="287" width="289" height="50"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Registar-se">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -472,9 +470,15 @@
                                     <action selector="RegisterAction:" destination="clf-wb-qVh" eventType="touchUpInside" id="ror-6E-Ffe"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Habilidades" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EsV-q6-tgq">
-                                <rect key="frame" x="41" y="74" width="310" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Habilidades" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EsV-q6-tgq">
+                                <rect key="frame" x="41" y="74" width="310" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Descriçāo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aqc-L5-hcG">
+                                <rect key="frame" x="41" y="151" width="310" height="75"/>
+                                <color key="textColor" red="0.97409694660000001" green="0.97720766469999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -482,7 +486,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="descricao" destination="Fpg-0A-8Ae" id="Pzp-8b-Vg2"/>
+                        <outlet property="descricao" destination="Aqc-L5-hcG" id="Q6y-Li-ZSa"/>
+                        <outlet property="resgitar" destination="0yT-Hs-TuV" id="QyR-Zh-7cJ"/>
                         <outlet property="tags" destination="EsV-q6-tgq" id="9IZ-Rx-5In"/>
                     </connections>
                 </viewController>
@@ -559,6 +564,9 @@
     </scenes>
     <resources>
         <image name="icon_1024px" width="1024" height="1024"/>
+        <image name="icon_camera" width="251" height="251"/>
+        <image name="icon_perfil" width="60" height="60"/>
+        <image name="icon_servicos" width="60" height="60"/>
         <image name="login_facebook" width="451" height="110"/>
         <image name="login_twitter" width="451" height="110"/>
     </resources>
