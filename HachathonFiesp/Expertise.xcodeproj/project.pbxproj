@@ -133,14 +133,14 @@
 		3D14EEE11B89ABCE00EC1137 /* ActionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionError.swift; sourceTree = "<group>"; };
 		3D14EEE31B89BF2A00EC1137 /* UIMPConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMPConfiguration.swift; sourceTree = "<group>"; };
 		3D3BC1EB1B88D99D0010D23C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		3DEBB1851B88A7D3003BB09F /* HachathonFiesp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HachathonFiesp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DEBB1851B88A7D3003BB09F /* Expertise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expertise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DEBB1891B88A7D3003BB09F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DEBB18A1B88A7D3003BB09F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DEBB18C1B88A7D3003BB09F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3DEBB18F1B88A7D3003BB09F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DEBB1911B88A7D3003BB09F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3DEBB1941B88A7D3003BB09F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3DEBB19A1B88A7D3003BB09F /* HachathonFiespTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HachathonFiespTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DEBB19A1B88A7D3003BB09F /* ExpertiseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpertiseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DEBB19F1B88A7D3003BB09F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DEBB1A01B88A7D3003BB09F /* HachathonFiespTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HachathonFiespTests.swift; sourceTree = "<group>"; };
 		3DEBB1AB1B88C0D5003BB09F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
@@ -288,8 +288,8 @@
 		3DEBB1861B88A7D3003BB09F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3DEBB1851B88A7D3003BB09F /* HachathonFiesp.app */,
-				3DEBB19A1B88A7D3003BB09F /* HachathonFiespTests.xctest */,
+				3DEBB1851B88A7D3003BB09F /* Expertise.app */,
+				3DEBB19A1B88A7D3003BB09F /* ExpertiseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -392,9 +392,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3DEBB1841B88A7D3003BB09F /* HachathonFiesp */ = {
+		3DEBB1841B88A7D3003BB09F /* Expertise */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3DEBB1A41B88A7D3003BB09F /* Build configuration list for PBXNativeTarget "HachathonFiesp" */;
+			buildConfigurationList = 3DEBB1A41B88A7D3003BB09F /* Build configuration list for PBXNativeTarget "Expertise" */;
 			buildPhases = (
 				3695394F5CBBFCDBC5F364E6 /* Check Pods Manifest.lock */,
 				3DEBB1811B88A7D3003BB09F /* Sources */,
@@ -407,14 +407,14 @@
 			);
 			dependencies = (
 			);
-			name = HachathonFiesp;
+			name = Expertise;
 			productName = HachathonFiesp;
-			productReference = 3DEBB1851B88A7D3003BB09F /* HachathonFiesp.app */;
+			productReference = 3DEBB1851B88A7D3003BB09F /* Expertise.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3DEBB1991B88A7D3003BB09F /* HachathonFiespTests */ = {
+		3DEBB1991B88A7D3003BB09F /* ExpertiseTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3DEBB1A71B88A7D3003BB09F /* Build configuration list for PBXNativeTarget "HachathonFiespTests" */;
+			buildConfigurationList = 3DEBB1A71B88A7D3003BB09F /* Build configuration list for PBXNativeTarget "ExpertiseTests" */;
 			buildPhases = (
 				3DEBB1961B88A7D3003BB09F /* Sources */,
 				3DEBB1971B88A7D3003BB09F /* Frameworks */,
@@ -425,9 +425,9 @@
 			dependencies = (
 				3DEBB19C1B88A7D3003BB09F /* PBXTargetDependency */,
 			);
-			name = HachathonFiespTests;
+			name = ExpertiseTests;
 			productName = HachathonFiespTests;
-			productReference = 3DEBB19A1B88A7D3003BB09F /* HachathonFiespTests.xctest */;
+			productReference = 3DEBB19A1B88A7D3003BB09F /* ExpertiseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -448,7 +448,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3DEBB1801B88A7D3003BB09F /* Build configuration list for PBXProject "HachathonFiesp" */;
+			buildConfigurationList = 3DEBB1801B88A7D3003BB09F /* Build configuration list for PBXProject "Expertise" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -461,8 +461,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3DEBB1841B88A7D3003BB09F /* HachathonFiesp */,
-				3DEBB1991B88A7D3003BB09F /* HachathonFiespTests */,
+				3DEBB1841B88A7D3003BB09F /* Expertise */,
+				3DEBB1991B88A7D3003BB09F /* ExpertiseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -581,7 +581,7 @@
 /* Begin PBXTargetDependency section */
 		3DEBB19C1B88A7D3003BB09F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3DEBB1841B88A7D3003BB09F /* HachathonFiesp */;
+			target = 3DEBB1841B88A7D3003BB09F /* Expertise */;
 			targetProxy = 3DEBB19B1B88A7D3003BB09F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -701,7 +701,7 @@
 				);
 				INFOPLIST_FILE = HachathonFiesp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Expertise;
 				SWIFT_OBJC_BRIDGING_HEADER = "HachathonFiesp/HachathonFiesp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -719,7 +719,7 @@
 				);
 				INFOPLIST_FILE = HachathonFiesp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Expertise;
 				SWIFT_OBJC_BRIDGING_HEADER = "HachathonFiesp/HachathonFiesp-Bridging-Header.h";
 			};
 			name = Release;
@@ -738,7 +738,7 @@
 				);
 				INFOPLIST_FILE = HachathonFiespTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ExpertiseTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HachathonFiesp.app/HachathonFiesp";
 			};
 			name = Debug;
@@ -753,7 +753,7 @@
 				);
 				INFOPLIST_FILE = HachathonFiespTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ExpertiseTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HachathonFiesp.app/HachathonFiesp";
 			};
 			name = Release;
@@ -761,7 +761,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3DEBB1801B88A7D3003BB09F /* Build configuration list for PBXProject "HachathonFiesp" */ = {
+		3DEBB1801B88A7D3003BB09F /* Build configuration list for PBXProject "Expertise" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3DEBB1A21B88A7D3003BB09F /* Debug */,
@@ -770,7 +770,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3DEBB1A41B88A7D3003BB09F /* Build configuration list for PBXNativeTarget "HachathonFiesp" */ = {
+		3DEBB1A41B88A7D3003BB09F /* Build configuration list for PBXNativeTarget "Expertise" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3DEBB1A51B88A7D3003BB09F /* Debug */,
@@ -779,7 +779,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3DEBB1A71B88A7D3003BB09F /* Build configuration list for PBXNativeTarget "HachathonFiespTests" */ = {
+		3DEBB1A71B88A7D3003BB09F /* Build configuration list for PBXNativeTarget "ExpertiseTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3DEBB1A81B88A7D3003BB09F /* Debug */,

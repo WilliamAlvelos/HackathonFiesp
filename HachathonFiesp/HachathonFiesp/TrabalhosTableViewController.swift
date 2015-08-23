@@ -18,6 +18,7 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
     
     var refreshControle: UIRefreshControl?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

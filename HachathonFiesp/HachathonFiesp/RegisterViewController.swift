@@ -71,9 +71,6 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         PermissionsResponse.checkCameraPermission()
         PermissionsResponse.checkRollCameraPermission()
         
-        
-        
-        
     }
     
     
@@ -152,7 +149,6 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         data.writeToFile(self.imagePathURL().path!, atomically: true)
         
         self.image.setBackgroundImage(image, forState: .Normal)
-
         
         //user?.image = image
         self.dismissViewControllerAnimated(true, completion: nil)

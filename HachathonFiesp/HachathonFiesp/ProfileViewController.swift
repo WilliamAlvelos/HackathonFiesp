@@ -36,7 +36,6 @@ class ProfileViewController : UIViewController{
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        
         self.imageUser.image = user?.image
         self.nome.text = user?.name
         self.tags.text = user?.tags

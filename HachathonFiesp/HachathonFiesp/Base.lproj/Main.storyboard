@@ -7,7 +7,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Expertise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -76,7 +76,7 @@
         <!--perfil-->
         <scene sceneID="no9-eQ-ylV">
             <objects>
-                <viewController id="vHe-Eh-T4g" customClass="ContaViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="perfil" id="vHe-Eh-T4g" customClass="ContaViewController" customModule="Expertise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MBD-tb-n0u"/>
                         <viewControllerLayoutGuide type="bottom" id="hi3-ka-6KS"/>
@@ -129,16 +129,16 @@
             </objects>
             <point key="canvasLocation" x="1321.5" y="1906.5"/>
         </scene>
-        <!--Conversas-->
+        <!--chat-->
         <scene sceneID="8pf-KM-rAk">
             <objects>
-                <tableViewController id="Jkd-Yq-pPH" customClass="ConversasTableViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Jkd-Yq-pPH" customClass="ConversasTableViewController" customModule="Expertise" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="22" sectionFooterHeight="22" id="ell-DS-Xm6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="conversaCell" rowHeight="101" id="Lai-I5-wtl" customClass="ConversaTableViewCell" customModule="HachathonFiesp" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="conversaCell" rowHeight="101" id="Lai-I5-wtl" customClass="ConversaTableViewCell" customModule="Expertise" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lai-I5-wtl" id="pLM-9L-a0Y">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -172,7 +172,7 @@
                             <outlet property="delegate" destination="Jkd-Yq-pPH" id="aeX-w1-gTG"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Conversas" id="wzR-gt-tYY"/>
+                    <tabBarItem key="tabBarItem" title="chat" image="icon_chat" id="wzR-gt-tYY"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiK-N3-pxl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,7 +182,7 @@
         <!--Chat View Controller-->
         <scene sceneID="BgI-xU-RYi">
             <objects>
-                <viewController storyboardIdentifier="chatView" id="cfO-om-BhF" customClass="ChatViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chatView" id="cfO-om-BhF" customClass="ChatViewController" customModule="Expertise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dis-Wx-KGK"/>
                         <viewControllerLayoutGuide type="bottom" id="a76-ge-uVL"/>
@@ -201,13 +201,13 @@
         <!--serviços-->
         <scene sceneID="T6q-EA-LA7">
             <objects>
-                <tableViewController id="mHD-0E-sgI" customClass="TrabalhosTableViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mHD-0E-sgI" customClass="TrabalhosTableViewController" customModule="Expertise" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="157" sectionHeaderHeight="22" sectionFooterHeight="22" id="d2h-Cx-Xe2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="157" id="4sQ-lc-yDw" customClass="CustomTableViewCell" customModule="HachathonFiesp" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="157" id="4sQ-lc-yDw" customClass="CustomTableViewCell" customModule="Expertise" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4sQ-lc-yDw" id="2ff-HF-y1W">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -264,7 +264,7 @@
         <!--Item 1-->
         <scene sceneID="xM8-5H-UPA">
             <objects>
-                <viewController id="6Lw-QG-bYd" customClass="ChatViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Lw-QG-bYd" customClass="ChatViewController" customModule="Expertise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZGm-B9-DNJ"/>
                         <viewControllerLayoutGuide type="bottom" id="gRB-gq-I9d"/>
@@ -373,7 +373,7 @@
         <!--Register View Controller-->
         <scene sceneID="XBm-1O-0PE">
             <objects>
-                <viewController storyboardIdentifier="register" id="RuQ-JZ-HFi" customClass="RegisterViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="register" id="RuQ-JZ-HFi" customClass="RegisterViewController" customModule="Expertise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YKy-Xi-K8c"/>
                         <viewControllerLayoutGuide type="bottom" id="Ffe-be-GW6"/>
@@ -451,7 +451,7 @@
         <!--Registro2 View Controller-->
         <scene sceneID="6dl-41-Iyd">
             <objects>
-                <viewController storyboardIdentifier="registro2" id="clf-wb-qVh" customClass="Registro2ViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registro2" id="clf-wb-qVh" customClass="Registro2ViewController" customModule="Expertise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fZX-3J-dCW"/>
                         <viewControllerLayoutGuide type="bottom" id="rYj-Zt-ty6"/>
@@ -498,7 +498,7 @@
         <!--Profile View Controller-->
         <scene sceneID="VFt-Zw-5FA">
             <objects>
-                <viewController storyboardIdentifier="profileView" id="u0R-oA-STN" customClass="ProfileViewController" customModule="HachathonFiesp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileView" id="u0R-oA-STN" customClass="ProfileViewController" customModule="Expertise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nT1-QR-Pq6"/>
                         <viewControllerLayoutGuide type="bottom" id="eb6-0Z-N5V"/>
@@ -565,6 +565,7 @@
     <resources>
         <image name="icon_1024px" width="1024" height="1024"/>
         <image name="icon_camera" width="251" height="251"/>
+        <image name="icon_chat" width="35" height="35"/>
         <image name="icon_perfil" width="35" height="35"/>
         <image name="icon_servicos" width="35" height="35"/>
         <image name="login_facebook" width="451" height="110"/>

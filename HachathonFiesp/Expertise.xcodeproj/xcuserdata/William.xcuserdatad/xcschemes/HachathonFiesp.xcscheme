@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3DEBB1841B88A7D3003BB09F"
-               BuildableName = "HachathonFiesp.app"
-               BlueprintName = "HachathonFiesp"
-               ReferencedContainer = "container:HachathonFiesp.xcodeproj">
+               BuildableName = "Expertise.app"
+               BlueprintName = "Expertise"
+               ReferencedContainer = "container:Expertise.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3DEBB1991B88A7D3003BB09F"
-               BuildableName = "HachathonFiespTests.xctest"
-               BlueprintName = "HachathonFiespTests"
-               ReferencedContainer = "container:HachathonFiesp.xcodeproj">
+               BuildableName = "ExpertiseTests.xctest"
+               BlueprintName = "ExpertiseTests"
+               ReferencedContainer = "container:Expertise.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3DEBB1991B88A7D3003BB09F"
-               BuildableName = "HachathonFiespTests.xctest"
-               BlueprintName = "HachathonFiespTests"
-               ReferencedContainer = "container:HachathonFiesp.xcodeproj">
+               BuildableName = "ExpertiseTests.xctest"
+               BlueprintName = "ExpertiseTests"
+               ReferencedContainer = "container:Expertise.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DEBB1841B88A7D3003BB09F"
-            BuildableName = "HachathonFiesp.app"
-            BlueprintName = "HachathonFiesp"
-            ReferencedContainer = "container:HachathonFiesp.xcodeproj">
+            BuildableName = "Expertise.app"
+            BlueprintName = "Expertise"
+            ReferencedContainer = "container:Expertise.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DEBB1841B88A7D3003BB09F"
-            BuildableName = "HachathonFiesp.app"
-            BlueprintName = "HachathonFiesp"
-            ReferencedContainer = "container:HachathonFiesp.xcodeproj">
+            BuildableName = "Expertise.app"
+            BlueprintName = "Expertise"
+            ReferencedContainer = "container:Expertise.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DEBB1841B88A7D3003BB09F"
-            BuildableName = "HachathonFiesp.app"
-            BlueprintName = "HachathonFiesp"
-            ReferencedContainer = "container:HachathonFiesp.xcodeproj">
+            BuildableName = "Expertise.app"
+            BlueprintName = "Expertise"
+            ReferencedContainer = "container:Expertise.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

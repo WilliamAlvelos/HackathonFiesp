@@ -54,6 +54,9 @@ class ChatViewController : JSQMessagesViewController, UIActionSheetDelegate, CLL
         super.viewDidLoad()
         
         
+        
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        
         activity = activityIndicator(view: self.navigationController!, texto: "Buscando Mensagens", inverse: false, viewController:self)
         
         
@@ -87,16 +90,13 @@ class ChatViewController : JSQMessagesViewController, UIActionSheetDelegate, CLL
         
         var rightBarButtonItemEdit: UIBarButtonItem = UIBarButtonItem(customView: buttonEdit)
         
-        
         self.navigationItem.rightBarButtonItem = rightBarButtonItemEdit
-        
-        
         
         var bubbleFactory:JSQMessagesBubbleImageFactory = JSQMessagesBubbleImageFactory()
         
-        self.outgoingBubbleImageData = bubbleFactory.outgoingMessagesBubbleImageWithColor(UIColor(red: 223/255, green: 34/255, blue: 96/255, alpha: 1))
+        self.outgoingBubbleImageData = bubbleFactory.outgoingMessagesBubbleImageWithColor(Colors.Azul)
         
-        self.incomingBubbleImageData = bubbleFactory.incomingMessagesBubbleImageWithColor(UIColor(red: 19/255, green: 16/255, blue: 70/255, alpha: 1))
+        self.incomingBubbleImageData = bubbleFactory.incomingMessagesBubbleImageWithColor(Colors.Branco)
         
     }
     
@@ -346,7 +346,7 @@ class ChatViewController : JSQMessagesViewController, UIActionSheetDelegate, CLL
             return self.avatars[message!.senderId] as! JSQMessageAvatarImageDataSource
         }
         
-        var jsqImage:JSQMessagesAvatarImage = JSQMessagesAvatarImageFactory.avatarImageWithUserInitials("EXP", backgroundColor: Colors.Rosa, textColor: Colors.Azul, font: UIFont.systemFontOfSize(14.0), diameter:UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+        var jsqImage:JSQMessagesAvatarImage = JSQMessagesAvatarImageFactory.avatarImageWithUserInitials("EXP", backgroundColor: Colors.Azul, textColor: Colors.Branco, font: UIFont.systemFontOfSize(14.0), diameter:UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
         
         var avatar = [message.senderId: jsqImage]
         

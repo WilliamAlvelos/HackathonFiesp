@@ -40,7 +40,7 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
         
         self.refreshControle = UIRefreshControl()
         self.refreshControle?.backgroundColor = Colors.Azul
-        self.refreshControle?.tintColor = Colors.Rosa
+        self.refreshControle?.tintColor = Colors.Branco
         self.refreshControle?.addTarget(self, action: Selector("reloadData"), forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(self.refreshControle!)
         
@@ -154,19 +154,36 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var view = TransitionManager.creatView("chatView") as! ChatViewController
-        var user = self.conversas[indexPath.row]
         
-        self.avatars.removeAllObjects()
-        var usuario :JSQMessagesAvatarImage = JSQMessagesAvatarImageFactory.avatarImageWithImage(self.conversas[indexPath.row].image, diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
-         self.avatars.setValue(usuario, forKey: "\(user.id)")
-        view.avatars = self.avatars
-        view.conversa = indexPath.row
-        view.name = self.conversas[indexPath.row].name
-        self.navigationController?.pushViewController(view, animated: true)
+        
+        if(self.resultSearchController.active){
+
+            var view = TransitionManager.creatView("chatView") as! ChatViewController
+            var user = self.conversas[indexPath.row]
+            
+            self.avatars.removeAllObjects()
+            var usuario :JSQMessagesAvatarImage = JSQMessagesAvatarImageFactory.avatarImageWithImage(self.filteredTableData[indexPath.row].image, diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+            self.avatars.setValue(usuario, forKey: "\(user.id)")
+            view.avatars = self.avatars
+            view.conversa = indexPath.row
+            view.name = self.conversas[indexPath.row].name
+            self.navigationController?.pushViewController(view, animated: true)
+            
+        }else{
+            
+            var view = TransitionManager.creatView("chatView") as! ChatViewController
+            var user = self.conversas[indexPath.row]
+            
+            self.avatars.removeAllObjects()
+            var usuario :JSQMessagesAvatarImage = JSQMessagesAvatarImageFactory.avatarImageWithImage(self.conversas[indexPath.row].image, diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+             self.avatars.setValue(usuario, forKey: "\(user.id)")
+            view.avatars = self.avatars
+            view.conversa = indexPath.row
+            view.name = self.conversas[indexPath.row].name
+            self.navigationController?.pushViewController(view, animated: true)
+        }
+        
     }
-    
-    
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         let sb = searchController.searchBar
@@ -174,7 +191,7 @@ class ConversasTableViewController: UITableViewController,UISearchBarDelegate, U
         self.filteredTableData = self.conversas.filter {
             s in
             let options = NSStringCompareOptions.CaseInsensitiveSearch
-            let found = s.descricao.rangeOfString(target, options: options)
+            let found = s.tags.rangeOfString(target, options: options)
             return (found != nil)
         }
         self.tableView.reloadData()
