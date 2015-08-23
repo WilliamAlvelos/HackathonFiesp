@@ -48,15 +48,15 @@ class ProfileViewController : UIViewController{
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        UIMPConfiguration.addBorderToView(self.mensagem, color: Colors.Azul, width: 3.0, corner: 25.0)
-        UIMPConfiguration.addBorderToView(self.recomendar, color: Colors.Azul, width: 3.0, corner: 25.0)
+        UIMPConfiguration.addBorderToView(self.mensagem, color: Colors.Azul, width: 3.0, corner: 36.0)
+        UIMPConfiguration.addBorderToView(self.recomendar, color: Colors.Azul, width: 3.0, corner: 36.0)
         //        UIMPConfiguration.addColorAndFontToButton(self.emailTextField, color: Colors.Rosa, fontName: FontName.ButtonFont, fontSize: 20)
 
         
-        
-        UIMPConfiguration.addColorAndFontToButton(self.mensagem, color: Colors.Azul, fontName: FontName.LabelFont, fontSize: 20)
-        
-        UIMPConfiguration.addColorAndFontToButton(self.recomendar, color: Colors.Azul, fontName: FontName.LabelFont, fontSize: 20)
+//        
+//        UIMPConfiguration.addColorAndFontToButton(self.mensagem, color: Colors.Azul, fontName: FontName.LabelFont, fontSize: 20)
+//        
+//        UIMPConfiguration.addColorAndFontToButton(self.recomendar, color: Colors.Azul, fontName: FontName.LabelFont, fontSize: 20)
         
     }
     

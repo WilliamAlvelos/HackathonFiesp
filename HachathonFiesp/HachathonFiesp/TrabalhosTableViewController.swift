@@ -28,7 +28,7 @@ class TrabalhosTableViewController: UITableViewController, UISearchBarDelegate, 
         self.tabBarController!.tabBar.barTintColor = UIColor(red: 13/255, green: 21/255, blue: 36/255, alpha: 1)
         
         self.navigationController?.navigationBar.barTintColor = Colors.Azul
-        self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.navigationBar.translucent = true
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
             controller.dimsBackgroundDuringPresentation = false

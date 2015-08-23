@@ -53,8 +53,6 @@ class ChatViewController : JSQMessagesViewController, UIActionSheetDelegate, CLL
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
         
         activity = activityIndicator(view: self.navigationController!, texto: "Buscando Mensagens", inverse: false, viewController:self)
@@ -76,8 +74,6 @@ class ChatViewController : JSQMessagesViewController, UIActionSheetDelegate, CLL
         self.showLoadEarlierMessagesHeader = false
         setupFirebase()
         //setupImageFirebase()
-        
-        self.title = name
         
         let buttonEdit: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
         buttonEdit.frame = CGRectMake(0, 0, 40, 40)
